@@ -1,0 +1,11 @@
+@import "./mixins/mixins.scss";
+
+.test{
+    @include when(disabled){
+        color:black;
+        font-size: 10px;
+        background: #3a8ee6;
+        clip-rule: nonzero;
+        align-content: baseline;
+    }
+}

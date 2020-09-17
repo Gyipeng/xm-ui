@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* Break-point
+--------------------------*/
+/**
+构建 BEM 体系
+*/
+.test.is-disabled {
+  color: black;
+  font-size: 10px;
+  background: #3a8ee6;
+  clip-rule: nonzero;
+  align-content: baseline; }

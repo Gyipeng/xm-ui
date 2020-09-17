@@ -1,0 +1,57 @@
+@import "./mixins/mixins.scss";
+@include res('xs'){
+  @for $i from 0 through 24 {
+    .xm-col-xs-#{$i} {
+      width: 100%/24*$i;
+    }
+    .xm-col-xs-offset-#{$i} {
+      margin-left: 100%/24*$i;
+    }
+  }
+}
+
+@include res('sm'){
+  @for $i from 0 through 24 {
+    .xm-col-sm-#{$i} {
+      width: 100%/24*$i;
+    }
+    .xm-col-sm-offset-#{$i} {
+      margin-left: 100%/24*$i;
+    }
+  }
+}
+
+
+@include res('md'){
+  @for $i from 0 through 24 {
+    .xm-col-md-#{$i} {
+      width: 100%/24*$i;
+    }
+    .xm-col-md-offset-#{$i} {
+      margin-left: 100%/24*$i;
+    }
+  }
+}
+
+@include res('lg'){
+  @for $i from 0 through 24 {
+    .xm-col-lg-#{$i} {
+      width: 100%/24*$i;
+    }
+    .xm-col-lg-offset-#{$i} {
+      margin-left: 100%/24*$i;
+    }
+  }
+}
+
+
+@include res('xl'){
+  @for $i from 0 through 24 {
+    .xm-col-xl-#{$i} {
+      width: 100%/24*$i;
+    }
+    .xm-col-xl-offset-#{$i} {
+      margin-left: 100%/24*$i;
+    }
+  }
+}

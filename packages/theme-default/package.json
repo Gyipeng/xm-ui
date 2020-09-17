@@ -1,0 +1,20 @@
+{
+  "name": "xm-ui-theme-default",
+  "version": "1.0.0",
+  "description": "新媒组件库主题样式",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GYP",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-csso": "^4.0.1",
+    "gulp-sass": "^4.1.0"
+  }
+}

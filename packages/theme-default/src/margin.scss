@@ -1,0 +1,18 @@
+@import "./mixins/mixins.scss";
+
+@for $i from 0 through 24 {
+  .ml#{$i} {
+    margin: $i;
+  }
+  .mt#{$i} {
+    margin: $i;
+  }
+  .mb#{$i}{
+    margin: $i;
+  }
+  .mr#{$i}{
+    margin: $i;
+  }
+}
+
+
