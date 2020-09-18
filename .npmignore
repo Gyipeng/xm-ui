@@ -1,7 +1,7 @@
 # 忽略目录
 src/
 node_modules/
-dist/
+#dist/
 
 # 忽略指定文件
 vue.config.js
