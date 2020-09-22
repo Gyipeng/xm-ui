@@ -15,6 +15,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "fs": "0.0.1-security",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "markdown-it-container": "^3.0.0",
