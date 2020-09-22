@@ -2,12 +2,12 @@
   <div  class="pg-index">
     <div class="index-container">
       <img width="300px" src="../assets/img/xm.jpg">
-      <p>一款基于Vue.js轻量级、模块化的前端 UI 组件库</p>
+      <p>一款基于Vue.js轻量级、模块化的 新媒 UI 组件库</p>
     </div>
     <div class="separate-panel">
       <div class="about">
         <router-link :to="{name: 'giud'}">开始使用</router-link>
-        <a target="_blank" class="btn-github" >GitHub</a>
+        <a target="_blank" class="btn-github" href="https://github.com/Gyipeng/xm-ui" >GitHub</a>
       </div>
     </div>
   </div>
