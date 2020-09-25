@@ -1,8 +1,11 @@
 
-import WButton from './button/index.js'
-
+import XMButton from './button/index.js'
+import XMTag from './tag/index.js'
+import XMCard from './card/index.js'
 const components = [
-  WButton
+  XMButton,
+  XMTag,
+  XMCard
 ]
 
 const install = function (Vue) {
@@ -16,6 +19,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  WButton
+  XMButton,
+  XMTag,
+  XMCard
 
 }

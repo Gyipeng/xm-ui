@@ -2,16 +2,19 @@
 
 @for $i from 0 through 24 {
   .ml#{$i} {
-    margin: $i;
+    margin: $i+px;
   }
   .mt#{$i} {
-    margin: $i;
+    margin: $i+px;
   }
   .mb#{$i}{
-    margin: $i;
+    margin: $i+px;
   }
   .mr#{$i}{
-    margin: $i;
+    margin: $i+px;
+  }
+  .fz#{$i}{
+    font-size:$i+px;
   }
 }
 
