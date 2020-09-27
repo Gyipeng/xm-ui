@@ -1,8 +1,29 @@
 
 <template>
-  <div :class="cls">
-    1234
-  </div>
+  <el-card :class="cls" :body-style="getBodyStyle">
+    <slot name="header"></slot>
+    <slot v-if="$slots.default"></slot>
+    <div v-else class="xm-card__body">
+      <div class="xm-card__header">
+        <el-image :src="src"></el-image>
+      </div>
+      <div class="xm-card__content">
+        <div class="xm-card__title">
+          {{ title }}
+        </div>
+        <div class="xm-card__desc">
+          {{ desc }}
+        </div>
+        <div class="xm-card__footer">
+           <div class="xm-card--white" v-for="action in actions" :key="action">
+             {{action}}
+           </div>
+        </div>
+      </div>
+    </div>
+    <slot name="footer"></slot>
+
+  </el-card>
 </template>
 
 <script>
@@ -14,11 +35,39 @@ export default {
 
     }
   },
+  props: {
+    bodyStyle: Object,
+    shadow: String,
+    border: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    src: {
+      type: String,
+      default: ''
+    },
+    desc: String,
+    time: String,
+    actions: Array,
+    title: String
+
+  },
+  created () {
+    console.log(this.$slots)
+  },
   computed: {
     cls () {
       const className = classnames('xm-card')
       return className
+    },
+    getBodyStyle () {
+      return { padding: '0px', ...this.bodyStyle}
     }
+
   }
 }
 </script>

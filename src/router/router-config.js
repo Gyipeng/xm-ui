@@ -84,6 +84,11 @@ export const routerConfig = {
           'path': '/swiperCard'
         },
         {
+          'desc': 'Swiper轮播',
+          'name': 'swiper',
+          'path': '/swiper'
+        },
+        {
           'desc': 'FixedMenu 固定菜单',
           'name': 'fixed-menu',
           'path': '/fixedMenu'
@@ -94,24 +99,39 @@ export const routerConfig = {
           'path': '/chat'
         },
         {
-          'desc': 'audio 音频',
+          'desc': 'Audio 音频',
           'name': 'audio',
           'path': '/audio'
         },
         {
-          'desc': 'video 视频',
+          'desc': 'Video 视频',
           'name': 'video',
           'path': '/video'
         },
         {
-          'desc': 'img 图片',
+          'desc': 'Img 图片',
           'name': 'img',
           'path': '/img'
+        },
+        {
+          'desc': 'MediaBox 媒体卡片',
+          'name': 'media-box',
+          'path': '/mediaBox'
+        },
+        {
+          'desc': 'Media 媒体',
+          'name': 'media',
+          'path': '/media'
         },
         {
           'desc': 'template 模版',
           'name': 'template',
           'path': '/template'
+        },
+        {
+          'desc': 'scrollbar 滚动条',
+          'name': 'scrollbar',
+          'path': '/scrollbar'
         }
 
       ]

@@ -2,6 +2,7 @@
 import XMButton from './button/index.js'
 import XMTag from './tag/index.js'
 import XMCard from './card/index.js'
+
 const components = [
   XMButton,
   XMTag,
