@@ -70,7 +70,7 @@ export const routerConfig = {
         },
         {
           'desc': 'Limit 限制输入域',
-          'name': 'limit-textarea',
+          'name': 'limit',
           'path': '/limit'
         },
         {

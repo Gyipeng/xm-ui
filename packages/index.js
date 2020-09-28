@@ -2,11 +2,16 @@
 import XMButton from './button/index.js'
 import XMTag from './tag/index.js'
 import XMCard from './card/index.js'
-
+import XMAudio from './audio/index.js'
+import XMVideo from './video/index.js'
+import XMLimit from './limit/index.js'
 const components = [
   XMButton,
   XMTag,
-  XMCard
+  XMCard,
+  XMAudio,
+  XMVideo,
+  XMLimit
 ]
 
 const install = function (Vue) {
@@ -22,6 +27,9 @@ export default {
   install,
   XMButton,
   XMTag,
-  XMCard
+  XMCard,
+  XMAudio,
+  XMVideo,
+  XMLimit
 
 }
