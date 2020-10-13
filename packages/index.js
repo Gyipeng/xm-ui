@@ -5,13 +5,15 @@ import XMCard from './card/index.js'
 import XMAudio from './audio/index.js'
 import XMVideo from './video/index.js'
 import XMLimit from './limit/index.js'
+import XMTextEllipsis from './text-ellipsis/index.js'
 const components = [
   XMButton,
   XMTag,
   XMCard,
   XMAudio,
   XMVideo,
-  XMLimit
+  XMLimit,
+  XMTextEllipsis
 ]
 
 const install = function (Vue) {
@@ -30,6 +32,7 @@ export default {
   XMCard,
   XMAudio,
   XMVideo,
-  XMLimit
+  XMLimit,
+  XMTextEllipsis
 
 }

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/**
+tag
+ */
+/* Break-point
+--------------------------*/
+/**
+构建 BEM 体系
+*/
+.xm-text-ellipsis .xm-text-ellipsis__more {
+  cursor: pointer;
+  color: #3199F5; }

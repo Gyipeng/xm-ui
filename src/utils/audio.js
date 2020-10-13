@@ -1,4 +1,4 @@
-import { formatTime2Date, realFormatSecond } from './tool'
+import { realFormatSecond } from './tool'
 
 export const mixin = {
   methods: {
@@ -19,7 +19,7 @@ export const mixin = {
       this.audio.playing = true
       const { target } = res
       const audios = document.getElementsByTagName('audio');
-      [...audios].forEach((item) => {
+      [...audios].forEach(item => {
         if (item !== target) {
           item.pause()
         }
@@ -29,24 +29,26 @@ export const mixin = {
     onPause () {
       this.audio.playing = false
     },
-    onTimeupdate (res) { // 时间更新时触发
+    onTimeupdate (res) {
+      // 时间更新时触发
       this.audio.currentTime = res.target.currentTime
     },
-    onLoadedmetadata (res) { // 初始化音频
+    onLoadedmetadata (res) {
+      // 初始化音频
       this.audio.maxTime = parseInt(res.target.duration)
     }
-
   },
   computed: {
     palyAudioDuration () {
       return realFormatSecond(this.audio.currentTime)
     },
-    audioDuration () { // 总时长
+    audioDuration () {
+      // 总时长
       return realFormatSecond(this.audio.maxTime)
     },
-    audioDate () { // 音频创建日期
+    audioDate () {
+      // 音频创建日期
       // return formatTime2Date(this.createTime)
     }
   }
-
 }

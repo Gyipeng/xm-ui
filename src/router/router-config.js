@@ -63,10 +63,11 @@ export const routerConfig = {
       'desc': '视图组件',
       'path': '/component',
       'items': [
+
         {
-          'desc': 'Showmore 显示更多',
-          'name': 'show-more',
-          'path': '/showMore'
+          'desc': 'TextEllipsis 显示更多',
+          'name': 'text-ellipsis',
+          'path': '/textEllipsis'
         },
         {
           'desc': 'Limit 限制输入域',
