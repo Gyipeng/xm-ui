@@ -155,7 +155,8 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | size     | 尺寸   | string  |   default,medium,small            |    —     |
-| type     | 类型   | string    |   primary,success,warning,danger,info |     —    |
-| plain     | 是否朴素按钮   | Boolean    | — | false   |
+| color     | 按钮颜色类型   | string    |   primary,success,warning,danger,info |     —    |
+| border     | 是否显示边框   | Boolean    | — | true   |
 | disabled  | 是否禁用状态    | boolean   | —   | false   |
-| icon  | 图标，已有的图标库中的图标名 | string   |  —  |  —  |
+| icon  | 右上角图标 x和√ | string   |  —  |  —  |
+

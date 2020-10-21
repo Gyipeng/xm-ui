@@ -13,7 +13,6 @@
              @pause="onPause"
              :src="src" >
       </audio>
-
   </div>
 
 </template>
@@ -23,6 +22,7 @@ import { mixin } from '../../../src/utils/audio'
 import stop from '../../../src/assets/img/stop.png'
 import play from '../../../src/assets/img/play.png'
 const classnames = require('classnames')
+
 export default {
   name: 'xmAudio',
   data () {
@@ -75,16 +75,21 @@ export default {
     },
     style () {
       if (this.cover) {
-        return { width: '100%', height: '100%', background: `url(${this.cover}) center center / cover no-repeat` }
+        return {width: '100%', height: '100%', background: `url(${this.cover}) center center / cover no-repeat`}
       }
-      return { width: '100%', height: '100%', background: `url(${this.defaultCover}) no-repeat center center / 104px ` }
+      return {width: '100%', height: '100%', background: `url(${this.defaultCover}) no-repeat center center / 104px `}
     }
 
   },
   methods: {
     handleToPlay () {
-      this.startPlayOrPause()
+      if (this.isAmr) {
+        this.AmrPlayOrPause()
+      } else {
+        this.startPlayOrPause()
+      }
     }
+
   }
 }
 </script>

@@ -10,9 +10,11 @@ const striptags = require('./strip-tags')
 const vueMarkdown = {
   preprocess: (MarkdownIt, source) => {
     console.log("test-----",source,);
-    MarkdownIt.renderer.rules.table_open = function () {
+    //source代表文档所有内容
+    MarkdownIt.renderer.rules.table_open = function () { //为说明文档表格添加样式
       return '<table class="table">'
     }
+    //添加高亮显示
     MarkdownIt.renderer.rules.fence = utils.wrapCustomClass(MarkdownIt.renderer.rules.fence)
 
     // ```html `` 给这种样式加个class hljs
@@ -36,17 +38,22 @@ const vueMarkdown = {
   },
   use: [
     [MarkdownItContainer, 'demo', {
+    //匹配```demo ``
       validate: params => params.trim().match(/^demo\s*(.*)$/),
       render: function(tokens, idx) {
 
         var m = tokens[idx].info.trim().match(/^demo\s*(.*)$/);
+        //nesting 有 1 0 -1  如果小于0说明没有该属性
+        if (tokens[idx].nesting === 1) { // 判断是否是开始标签
 
-        if (tokens[idx].nesting === 1) {
           var desc = tokens[idx + 2].content;
+          // 获取代码块内的html和js代码
           const html = utils.convertHtml(striptags(tokens[idx + 1].content, 'script'))
           // 移除描述，防止被添加到代码块
           tokens[idx + 2].children = [];
+
           console.log(desc,tokens,"test123",idx,html);
+          // 使用自定义开发组件【DemoBlock】来包裹内容并且渲染成案例和代码示例
           return `<demo-block>
                         <div slot="desc">${html}</div>
                         <div slot="highlight">`;
@@ -89,6 +96,9 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      "@packages":resolve('packages'),
+      "@components":resolve('src/components'),
+      "@utils":resolve('src/utils'),
     }
   },
   module: {

@@ -48,14 +48,34 @@ export const routerConfig = {
           'path': '/tag'
         },
         {
+          'desc': 'ButtonMore 更多操作',
+          'name': 'button-more',
+          'path': '/buttonMore'
+        },
+        {
           'desc': 'CheckedCard 多选卡片',
           'name': 'checked-card',
           'path': '/checkedCard'
         },
         {
-          'desc': 'radioCard 单选选卡片',
+          'desc': 'RadioCard 单选选卡片',
           'name': 'radio-card',
           'path': '/radioCard'
+        },
+        {
+          'desc': 'Tabs 标签页',
+          'name': 'tabs',
+          'path': '/tabs'
+        },
+        {
+          'desc': 'Space 间隔',
+          'name': 'space',
+          'path': '/space'
+        },
+        {
+          'desc': 'Phone 手机',
+          'name': 'phone',
+          'path': '/phone'
         }
       ]
     },
@@ -63,11 +83,15 @@ export const routerConfig = {
       'desc': '视图组件',
       'path': '/component',
       'items': [
-
         {
-          'desc': 'TextEllipsis 显示更多',
+          'desc': 'TextEllipsis 文本省略',
           'name': 'text-ellipsis',
           'path': '/textEllipsis'
+        },
+        {
+          'desc': 'ButtonEllipsis 按钮省略',
+          'name': 'button-ellipsis',
+          'path': '/buttonEllipsis'
         },
         {
           'desc': 'Limit 限制输入域',
@@ -125,15 +149,41 @@ export const routerConfig = {
           'path': '/media'
         },
         {
-          'desc': 'template 模版',
+          'desc': 'Template 模版',
           'name': 'template',
           'path': '/template'
         },
         {
-          'desc': 'scrollbar 滚动条',
+          'desc': 'Scrollbar 滚动条',
           'name': 'scrollbar',
           'path': '/scrollbar'
-        }
+        },
+        {
+          'desc': 'Table 分页表格',
+          'name': 'table',
+          'path': '/table'
+        },
+        {
+          'desc': 'Permission 权限',
+          'name': 'permission',
+          'path': '/permission'
+        },
+        {
+          'desc': 'Collapse 收起',
+          'name': ' collapse',
+          'path': '/collapse'
+        },
+        {
+          'desc': 'Upload 上传',
+          'name': ' upload',
+          'path': '/upload'
+        },
+        {
+          'desc': 'Cropper 裁剪',
+          'name': ' cropper',
+          'path': '/cropper'
+        },
+
 
       ]
     }

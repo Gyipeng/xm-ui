@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/**
+tag
+ */
+/* Break-point
+--------------------------*/
+/**
+构建 BEM 体系
+*/
+.xm-phone {
+  box-sizing: border-box;
+  width: 410px;
+  height: 830px;
+  padding: 55px 19px 53px 22px;
+  background: url(https://img.alicdn.com/tfs/TB17Ne9u8r0gK0jSZFnXXbRRXXa-820-1660.png) 0 0 no-repeat;
+  background-size: 410px 830px; }
+  .xm-phone .xm-phone__content {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eee;
+    border-radius: 2px; }

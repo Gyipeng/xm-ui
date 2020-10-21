@@ -120,6 +120,26 @@ export const mixin = {
         const vcTooltipDom = document.getElementById('mbmp-title')
         vcTooltipDom && document.body.removeChild(vcTooltipDom)
       }
+    },
+    clickoutside: {
+      bind (el, binding) {
+        function documentHandler (e) {
+          if (el.contains(e.target)) {
+            return false
+          }
+          if (binding.expression) {
+            binding.value(e)
+          }
+        }
+        el.ClickOutside = documentHandler
+        document.addEventListener('click', documentHandler)
+      },
+      unbind (el) {
+        document.removeEventListener('click', el.ClickOutside)
+        // 如果不移除，当组件或元素销毁时，它仍存在于内存中
+        delete el.ClickOutside
+      }
+
     }
 
   }

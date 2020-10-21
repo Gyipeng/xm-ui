@@ -13,7 +13,7 @@
 
 <div class="demo-block">
   <div >
-   <xm-audio src="http://124.42.103.156:8089/group1/M00/12/73/CgrQc19W_g-AAx6JAAWHHqsjnPY493.aac"></xm-audio>
+   <xm-audio src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr"></xm-audio>
   </div>
 </div>
 
@@ -29,7 +29,7 @@
 </style>
 
 <div>
-   <xm-audio src="http://124.42.103.156:8089/group1/M00/12/73/CgrQc19W_g-AAx6JAAWHHqsjnPY493.aac">
+   <xm-audio src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr">
 
    </xm-audio>
 </div>

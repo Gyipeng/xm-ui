@@ -19,8 +19,8 @@
     font-weight: 400;
     font-size: 16px;
     color: #303133;
-    line-height: 24px;
-    height: 24px;
+    //line-height: 24px;
+    //height: 24px;
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -28,11 +28,11 @@
   }
   @include e(desc){
     padding-top: 8px;
-    height: 44px;
+    //height: 44px;
     text-align: left;
     font-size: 14px;
     color: #606266;
-    line-height: 22px;
+    //line-height: 22px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -43,12 +43,12 @@
 
   }
   @include m(white){
-    height: 16px;
+    //height: 16px;
     font-size: 16px;
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: #787D80;
-    line-height: 16px;
+    //line-height: 16px;
     text-align: center;
     padding:8px ;
   }

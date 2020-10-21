@@ -8,3 +8,13 @@
 @import "video.css";
 @import "limit.css";
 @import "text-ellipsis.css";
+@import "checked-card.css";
+@import "phone.css";
+@import "space.css";
+@import "fixed-menu.css";
+@import "pull-up-menu.css";
+@import "media-box.css";
+@import "media.css";
+*{
+  box-sizing: border-box;
+}

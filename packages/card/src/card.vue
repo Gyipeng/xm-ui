@@ -5,7 +5,7 @@
     <slot v-if="$slots.default"></slot>
     <div v-else class="xm-card__body">
       <div class="xm-card__header">
-        <el-image :src="src"></el-image>
+        <xm-media :src="src"></xm-media>
       </div>
       <div class="xm-card__content">
         <div class="xm-card__title">
@@ -55,9 +55,6 @@ export default {
     actions: Array,
     title: String
 
-  },
-  created () {
-    console.log(this.$slots)
   },
   computed: {
     cls () {
