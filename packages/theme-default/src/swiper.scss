@@ -1,0 +1,28 @@
+@import "./mixins/mixins.scss";
+@include b(swiper){
+   margin:0 auto;
+   @include e(totalBox){
+     font-size: 12px;
+     color:$tabs-color;
+     text-align: center;
+     margin-bottom:8px;
+   }
+   @include e(num){
+     padding: 0 2px;
+     color: $primary-color-light;
+   }
+   @include e(button){
+     top: 50%;
+     transform: translateY(-50%);
+     width:40px;
+     height:40px;
+     background:rgba(230,239,255,1);
+     border-radius:50%;
+     text-align: center;
+     line-height: 40px;
+     font-size: 13px;
+     color: $primary-color;
+   }
+
+
+}

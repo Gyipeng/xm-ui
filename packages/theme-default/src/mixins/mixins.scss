@@ -19,7 +19,7 @@
     @each $unit in $element {
         $currentSelector: #{ $currentSelector + "." + $B + $element-separator + $unit + "," };
     }
-    
+
     #{$currentSelector}{
         @content;
     }
@@ -57,4 +57,13 @@
     }@else{
         @warn "key不存在"+#{$key};
     }
+}
+
+@mixin middle($width,$height){
+  width:$width+px ;
+  height:$height+px ;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }

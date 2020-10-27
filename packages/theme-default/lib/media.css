@@ -1,9 +1,25 @@
 @charset "UTF-8";
+/**
+tag
+ */
+/**
+tabs
+ */
+/**
+font/
+ */
+/**
+/
+ */
 /* Break-point
 --------------------------*/
 /**
 构建 BEM 体系
 */
+.xm-media {
+  width: 100%;
+  height: 100%; }
+
 @media only screen and (max-width: 767px) {
   .xm-col-xs-0 {
     width: 0%; }

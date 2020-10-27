@@ -1,0 +1,8 @@
+@import "./mixins/mixins.scss";
+@include b(text-ellipsis){
+  @include e(more) {
+    //margin-left: 3px;
+    cursor: pointer;
+    color: $primary-color-dark;
+  }
+}

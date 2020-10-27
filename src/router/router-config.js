@@ -22,6 +22,11 @@ export const routerConfig = {
       'type': 'pages'
     },
     {
+      'name': 'methods',
+      'path': '/methods',
+      'desc': '全局方法'
+    },
+    {
       'name': 'logs',
       'path': '/logs',
       'desc': '更新日志'
@@ -48,14 +53,34 @@ export const routerConfig = {
           'path': '/tag'
         },
         {
+          'desc': 'ButtonMore 更多操作',
+          'name': 'button-more',
+          'path': '/buttonMore'
+        },
+        {
           'desc': 'CheckedCard 多选卡片',
           'name': 'checked-card',
           'path': '/checkedCard'
         },
         {
-          'desc': 'radioCard 单选选卡片',
+          'desc': 'RadioCard 单选选卡片',
           'name': 'radio-card',
           'path': '/radioCard'
+        },
+        {
+          'desc': 'Tabs 标签页',
+          'name': 'tabs',
+          'path': '/tabs'
+        },
+        {
+          'desc': 'Space 间隔',
+          'name': 'space',
+          'path': '/space'
+        },
+        {
+          'desc': 'Phone 手机',
+          'name': 'phone',
+          'path': '/phone'
         }
       ]
     },
@@ -64,13 +89,18 @@ export const routerConfig = {
       'path': '/component',
       'items': [
         {
-          'desc': 'Showmore 显示更多',
-          'name': 'show-more',
-          'path': '/showMore'
+          'desc': 'TextEllipsis 文本省略',
+          'name': 'text-ellipsis',
+          'path': '/textEllipsis'
+        },
+        {
+          'desc': 'ButtonEllipsis 按钮省略',
+          'name': 'button-ellipsis',
+          'path': '/buttonEllipsis'
         },
         {
           'desc': 'Limit 限制输入域',
-          'name': 'limit-textarea',
+          'name': 'limit',
           'path': '/limit'
         },
         {
@@ -78,10 +108,15 @@ export const routerConfig = {
           'name': 'card',
           'path': '/card'
         },
+        // {
+        //   'desc': 'SwiperCard 轮播卡片',
+        //   'name': 'swiper-card',
+        //   'path': '/swiperCard'
+        // },
         {
-          'desc': 'SwiperCard 轮播卡片',
-          'name': 'swiper-card',
-          'path': '/swiperCard'
+          'desc': 'Swiper轮播',
+          'name': 'swiper',
+          'path': '/swiper'
         },
         {
           'desc': 'FixedMenu 固定菜单',
@@ -94,25 +129,66 @@ export const routerConfig = {
           'path': '/chat'
         },
         {
-          'desc': 'audio 音频',
+          'desc': 'Audio 音频',
           'name': 'audio',
           'path': '/audio'
         },
         {
-          'desc': 'video 视频',
+          'desc': 'Video 视频',
           'name': 'video',
           'path': '/video'
         },
         {
-          'desc': 'img 图片',
+          'desc': 'Img 图片',
           'name': 'img',
           'path': '/img'
         },
         {
-          'desc': 'template 模版',
+          'desc': 'MediaBox 媒体卡片',
+          'name': 'media-box',
+          'path': '/mediaBox'
+        },
+        {
+          'desc': 'Media 媒体',
+          'name': 'media',
+          'path': '/media'
+        },
+        {
+          'desc': 'Template 模版',
           'name': 'template',
           'path': '/template'
-        }
+        },
+        {
+          'desc': 'Scrollbar 滚动条',
+          'name': 'scrollbar',
+          'path': '/scrollbar'
+        },
+        {
+          'desc': 'Table 分页表格',
+          'name': 'table',
+          'path': '/table'
+        },
+        {
+          'desc': 'Permission 权限',
+          'name': 'permission',
+          'path': '/permission'
+        },
+        {
+          'desc': 'Collapse 收起',
+          'name': ' collapse',
+          'path': '/collapse'
+        },
+        {
+          'desc': 'Upload 上传',
+          'name': ' upload',
+          'path': '/upload'
+        },
+        {
+          'desc': 'Cropper 裁剪',
+          'name': ' cropper',
+          'path': '/cropper'
+        },
+
 
       ]
     }

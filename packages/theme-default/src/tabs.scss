@@ -1,0 +1,40 @@
+@import "./mixins/mixins.scss";
+
+@include b(tabs){
+    cursor: pointer;
+    @include m(default){
+
+      @include e(item){
+        display: inline-block;
+        padding: 6px 10px;
+        color: $tabs-color;
+        font-size: $font-size;
+        background: #FFFFFF;
+        border-radius: 6px;
+        &:hover,&--selected{
+          color: $primary-color;
+          background: $tabs-bg;
+        }
+      }
+
+    }
+  @include m(vertical){
+
+    @include e(item){
+      display: block;
+      padding: 6px 10px;
+      color: $tabs-color;
+      font-size: $font-size;
+      background: #FFFFFF;
+      border-radius: 6px;
+      &:hover,&--selected{
+        color: $primary-color;
+        background: $tabs-bg;
+      }
+    }
+
+  }
+
+
+
+ }

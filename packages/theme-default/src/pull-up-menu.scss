@@ -1,0 +1,44 @@
+@import "./mixins/mixins.scss";
+@include b(pull-up-menu){
+  flex: 1;
+  //display: inline-block;
+  //min-width: 100px;
+  position: relative;
+   @include e(content){
+     position: absolute;
+     bottom: 30px;
+     left: 0;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     border: solid 1px #f1f1f1;
+     border-radius: 4px;
+     overflow: hidden;
+     li{
+       text-align: center;
+       list-style: none;
+       height: 30px;
+       line-height: 30px;
+       font-size: 14px;
+       border-bottom: solid 1px #f1f1f1;
+       background: #ffffff;
+     }
+     li:last-child{
+       border-bottom: none;
+     }
+     li:hover{
+       background: #f6f6f6;
+     }
+   }
+  @include e(title){
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    background: #f1f1f1;
+    font-size: 14px;
+    text-align: center;
+    color: #333333;
+    border-radius: 4px;
+  }
+
+}

@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/**
+tag
+ */
+/**
+tabs
+ */
+/**
+font/
+ */
+/**
+/
+ */
+/* Break-point
+--------------------------*/
+/**
+构建 BEM 体系
+*/
+.xm-video {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .xm-video .xm-video__play {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .xm-video .xm-video__type {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #ffffff; }

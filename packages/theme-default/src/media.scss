@@ -1,4 +1,15 @@
 @import "./mixins/mixins.scss";
+
+@include b(media){
+  width: 100%;
+  height: 100%;
+
+}
+
+
+
+
+
 @include res('xs'){
   @for $i from 0 through 24 {
     .xm-col-xs-#{$i} {
