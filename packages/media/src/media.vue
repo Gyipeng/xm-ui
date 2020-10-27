@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { matchType } from '@utils/tool'
+import { matchType } from '../../../utils/tool'
 export default {
   name: 'xm-media',
   data () {

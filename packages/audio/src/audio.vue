@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import { mixin } from '../../../src/utils/audio'
-import stop from '../../../src/assets/img/stop.png'
-import play from '../../../src/assets/img/play.png'
+import { mixin } from '../../../utils/audio'
+import stop from '../../../assets/img/stop.png'
+import play from '../../../assets/img/play.png'
 const classnames = require('classnames')
 
 export default {

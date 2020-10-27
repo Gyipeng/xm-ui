@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import emitter from '@utils/emitter.js'
+import emitter from '../../../utils/emitter.js'
 const prefix = 'xm-checked-card'
 const classnames = require('classnames')
 export default {

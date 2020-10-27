@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import {mixin} from '../../../src/utils/minxin'
+import {mixin} from '../../../utils/minxin'
 export default {
   name: 'xmLimit',
   data () {

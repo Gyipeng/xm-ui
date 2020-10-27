@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import emitter from '@utils/emitter.js'
+import emitter from '../../../utils/emitter.js'
 export default {
   name: 'xm-checked-card-group',
   componentName: 'checkedCardGroup',

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { mixin } from '@utils/minxin'
+import { mixin } from '../../../utils/minxin'
 export default {
   name: 'xm-pull-up-menu',
   data () {
