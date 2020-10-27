@@ -9,7 +9,7 @@ const striptags = require('./strip-tags')
 
 const vueMarkdown = {
   preprocess: (MarkdownIt, source) => {
-    console.log("test-----",source,);
+    // console.log("test-----",source,);
     //source代表文档所有内容
     MarkdownIt.renderer.rules.table_open = function () { //为说明文档表格添加样式
       return '<table class="table">'
@@ -52,7 +52,7 @@ const vueMarkdown = {
           // 移除描述，防止被添加到代码块
           tokens[idx + 2].children = [];
 
-          console.log(desc,tokens,"test123",idx,html);
+          // console.log(desc,tokens,"test123",idx,html);
           // 使用自定义开发组件【DemoBlock】来包裹内容并且渲染成案例和代码示例
           return `<demo-block>
                         <div slot="desc">${html}</div>
