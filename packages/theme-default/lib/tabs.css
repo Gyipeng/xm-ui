@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/**
+tag
+ */
+/**
+tabs
+ */
+/**
+font/
+ */
+/**
+/
+ */
+/* Break-point
+--------------------------*/
+/**
+构建 BEM 体系
+*/
+.xm-tabs {
+  cursor: pointer; }
+  .xm-tabs--default .xm-tabs__item {
+    display: inline-block;
+    padding: 6px 10px;
+    color: #707A80;
+    font-size: 14px;
+    background: #FFFFFF;
+    border-radius: 6px; }
+    .xm-tabs--default .xm-tabs__item:hover, .xm-tabs--default .xm-tabs__item--selected {
+      color: #409EFF;
+      background: #EBF6FF; }
+  .xm-tabs--vertical .xm-tabs__item {
+    display: block;
+    padding: 6px 10px;
+    color: #707A80;
+    font-size: 14px;
+    background: #FFFFFF;
+    border-radius: 6px; }
+    .xm-tabs--vertical .xm-tabs__item:hover, .xm-tabs--vertical .xm-tabs__item--selected {
+      color: #409EFF;
+      background: #EBF6FF; }

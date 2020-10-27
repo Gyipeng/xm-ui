@@ -14,6 +14,11 @@ import PullUpMenu from './pull-up-menu/index.js'
 import Media from './media/index.js'
 import MediaBox from './media-box/index.js'
 import ButtonMore from './button-more/index.js'
+import ButtonEllipsis from './button-ellipsis/index.js'
+import Tabs from './tabs/index.js'
+import Swiper from './swiper/index.js'
+
+import style from '../src/utils/style'
 const components = [
   Button,
   Tag,
@@ -29,12 +34,30 @@ const components = [
   PullUpMenu,
   Media,
   MediaBox,
-  ButtonMore
+  ButtonMore,
+  ButtonEllipsis,
+  Tabs,
+  Swiper
 ]
+
+const directives = {
+  width: style.width,
+  color: style.color,
+  'bg-color': style.bgColor,
+  height: style.height,
+  padding: style.padding,
+  margin: style.margin,
+  font: style.font
+
+}
 
 const install = function (Vue) {
   if (install.installed) return
   components.map(component => Vue.component(component.name, component))
+
+  Object.keys(directives).forEach(key => {
+    Vue.directive(key, directives[key])
+  })
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -57,6 +80,9 @@ export default {
   PullUpMenu,
   Media,
   MediaBox,
-  ButtonMore
+  ButtonMore,
+  ButtonEllipsis,
+  Tabs,
+  Swiper
 
 }

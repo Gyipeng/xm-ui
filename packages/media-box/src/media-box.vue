@@ -4,7 +4,7 @@
     <div class="xm-media-box__top">
       <div class="xm-media-box__title">星空插画12一期14.jpg</div>
       <div class="xm-media-box__action">
-        <xm-button-more class="buttonmore"   v-bind="$attrs" >
+        <xm-button-more    v-bind="$attrs" >
           <i class="icon-more"></i>
         </xm-button-more>
       </div>

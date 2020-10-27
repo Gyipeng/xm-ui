@@ -22,6 +22,11 @@ export const routerConfig = {
       'type': 'pages'
     },
     {
+      'name': 'methods',
+      'path': '/methods',
+      'desc': '全局方法'
+    },
+    {
       'name': 'logs',
       'path': '/logs',
       'desc': '更新日志'
@@ -103,11 +108,11 @@ export const routerConfig = {
           'name': 'card',
           'path': '/card'
         },
-        {
-          'desc': 'SwiperCard 轮播卡片',
-          'name': 'swiper-card',
-          'path': '/swiperCard'
-        },
+        // {
+        //   'desc': 'SwiperCard 轮播卡片',
+        //   'name': 'swiper-card',
+        //   'path': '/swiperCard'
+        // },
         {
           'desc': 'Swiper轮播',
           'name': 'swiper',

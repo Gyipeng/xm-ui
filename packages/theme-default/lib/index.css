@@ -15,6 +15,9 @@
 @import "pull-up-menu.css";
 @import "media-box.css";
 @import "media.css";
+@import "button-ellipsis.css";
+@import "tabs.css";
+@import "swiper.css";
 *{
   box-sizing: border-box;
 }

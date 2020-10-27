@@ -3,7 +3,7 @@
 ### 基础用法
 
 <style>
-  .xm-audio{
+  .xm-audio-demo{
     width:224px;
     height:144px;
     margin-right: 10px;
@@ -13,14 +13,14 @@
 
 <div class="demo-block">
   <div >
-   <xm-audio src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr"></xm-audio>
+   <xm-audio class="xm-audio-demo" src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr"></xm-audio>
   </div>
 </div>
 
 ::: demo
 ```html
 <style>
-   .xm-audio{
+   .xm-audio-demo{
       width:224px;
       height:144px;
       margin-right: 10px;
@@ -29,7 +29,7 @@
 </style>
 
 <div>
-   <xm-audio src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr">
+   <xm-audio class="xm-audio-demo" src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr">
 
    </xm-audio>
 </div>

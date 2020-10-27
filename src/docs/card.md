@@ -9,7 +9,7 @@
 ### 基础用法
 <div class="demo-block">
   <div >
-    <xm-card style="margin-right: 10px" title="测试" desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
+    <xm-card  style="margin-right: 10px" title="测试" desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
      src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr"
     :actions="['测试','生物','卡','卡地方']"> </xm-card>
   </div>
