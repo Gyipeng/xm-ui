@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import {realFormatSecond} from '../../../src/utils/tool'
+import {realFormatSecond} from '@utils/tool'
 import play from '../../../src/assets/img/play.png'
 const classnames = require('classnames')
 export default {
