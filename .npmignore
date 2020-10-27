@@ -1,9 +1,9 @@
 # 忽略目录
-src/
-node_modules/
-dist/
+#src/
+#node_modules/
+#dist/
 
 # 忽略指定文件
-vue.config.js
-babel.config.js
-*.map
+#vue.config.js
+#babel.config.js
+#*.map
