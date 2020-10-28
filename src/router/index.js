@@ -30,5 +30,9 @@ let addComponent = (router) => {
 addComponent(routes)
 
 export default new Router({
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+    // return 期望滚动到哪个的位置
+  },
   routes
 })

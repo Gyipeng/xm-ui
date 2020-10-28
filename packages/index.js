@@ -18,7 +18,7 @@ import ButtonEllipsis from './button-ellipsis/index.js'
 import Tabs from './tabs/index.js'
 import Swiper from './swiper/index.js'
 
-import style from '../src/utils/style'
+import style from '../utils/style'
 const components = [
   Button,
   Tag,
