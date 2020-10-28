@@ -55,8 +55,8 @@ export default {
   },
   methods: {
     menuClick (item) {
-      item.action()
-      // this.$emit(val)
+      item.action(item)
+      this.$emit(item)
     }
   }
 }
