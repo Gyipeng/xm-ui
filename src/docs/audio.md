@@ -14,8 +14,11 @@
 <div class="demo-block">
   <div >
    <xm-audio class="xm-audio-demo" src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr"></xm-audio>
+   <xm-audio class="xm-audio-demo" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
   </div>
 </div>
+
+
 
 ::: demo
 ```html
@@ -32,6 +35,7 @@
    <xm-audio class="xm-audio-demo" src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr">
 
    </xm-audio>
+     <xm-audio class="xm-audio-demo" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
 </div>
 
 
