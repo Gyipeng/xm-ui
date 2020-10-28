@@ -66,7 +66,7 @@ export default {
         let more = this.$el.querySelector('.xm-text-ellipsis__more')
         this.offsetHeight = more.offsetHeight
         let height = this.height || this.row * this.offsetHeight
-        this.isOvers(textDom)
+        // this.isOvers(textDom)
         let n = 999
         if (textDom) {
           if (title.offsetHeight > height) {
@@ -82,13 +82,14 @@ export default {
               }
               n--
             }
+
+            this.$emit('hide')
+            this.isHide = true
+          } else {
+            more.style.display = 'none'
+            this.$emit('show')
+            this.isHide = false
           }
-          this.$emit('hide')
-          this.isHide = true
-        } else {
-          more.style.display = 'none'
-          this.$emit('show')
-          this.isHide = false
         }
       })
     },
@@ -102,6 +103,7 @@ export default {
     }
   },
   mounted () {
+
     this.init()
   },
   watch: {

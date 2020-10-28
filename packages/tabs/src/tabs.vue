@@ -1,7 +1,10 @@
 
 <template>
   <div :class="tabCls">
-    <div v-for="(item,index) of dataSource "  @click="trigger(item, index)"  :key="item[key]" :class="{'xm-tabs__selected':item[key]==value,'xm-tabs__item--selected':item[key] == value}" class="xm-tabs__item">
+    <div v-for="(item,index) of dataSource "  @click="trigger(item, index)"
+         @mouseenter="mouseenter(index,item)"
+         @mouseleave="mouseleave(index,item)"
+         :key="item[key]" :class="{'xm-tabs__selected':item[key]==value,'xm-tabs__item--selected':item[key] == value}" class="xm-tabs__item">
       <span v-if="!$scopedSlots.item">{{item[title]}}</span>
       <slot v-else :tab="item" name="item"></slot>
     </div>
@@ -40,7 +43,7 @@ export default {
     titleName: {
       type: String,
       default: 'value'
-    }
+    },
   },
   methods: {
     trigger (data, index) {
@@ -49,6 +52,12 @@ export default {
         this.$emit('change', data, index)
       }
       this.$emit('click', data, index)
+    },
+    mouseenter (index, item) {
+      this.$emit('mouseenter', index, item)
+    },
+    mouseleave (index, item) {
+      this.$emit('mouseleave', index, item)
     }
 
   },
@@ -56,7 +65,7 @@ export default {
     tabCls () {
       return {
         [`${prefix}`]: true,
-        [`${prefix}--${this.type}`]: !!this.type&&!this.className,
+        [`${prefix}--${this.type}`]: !!this.type && !this.className,
         [this.className]: !!this.className
       }
     }
