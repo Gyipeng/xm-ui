@@ -20,7 +20,7 @@ const minifyCSS = require('gulp-csso')
 function buildScssTask () {
   return src('./src/*.scss')
     .pipe(sass())
-    // .pipe(minifyCSS())
+    .pipe(minifyCSS())
     .pipe(dest('./lib'))
 }
 
