@@ -1,6 +1,6 @@
 {
   "name": "xinmei-ui",
-  "version": "1.0.10+20w44a",
+  "version": "1.0.11+20w44a",
   "description": "新媒组件库",
   "author": "gyp“\n\n\ngit config --global user.name gyp“ <guoyipeng@feinno.com>",
   "private": false,
