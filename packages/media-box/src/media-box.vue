@@ -19,9 +19,10 @@
 </template>
 
 <script>
-
+import emitter from '../../../utils/emitter.js'
 export default {
   name: 'xm-media-box',
+  componentName: 'parent',
   data () {
     return {
 
@@ -33,6 +34,7 @@ export default {
       default: ''
     }
   },
+  mixins: [emitter],
   methods: {
     name () {
 

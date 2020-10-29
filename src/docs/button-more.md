@@ -7,12 +7,12 @@
 
 
 
-# ButtonMore 更多操作
+# ButtonMore 更多操作 (配置action触发方法)
 ----
 ### 基础用法
 <div class="demo-block">
  <xm-button-more  class="buttonmore" :src="exchange" :menus="menus"> </xm-button-more>
- <xm-button-more class="buttonmore"   :menus="menus">
+ <xm-button-more class="buttonmore"   :menus="menus"  @edit="edit">
    <i class="icon-more"></i>
 </xm-button-more>
 </div>
@@ -29,21 +29,25 @@ export default {
                  action:()=>{
                   console.log(1)
                  },
-                 icon: 'icon-edit'
+                 icon: 'icon-edit',
+                 key:"edit"
                },
                {
                  name: '删除',
                  action:()=>{
                    console.log(2)
                  },
-                 icon: 'icon-delete'
+                 icon: 'icon-delete',
+                 key:"delete"
                },
              ],
              exchange
      }
   },
   methods: {
-
+       edit(){
+        console.log(3)
+       }
 
   },
 }
@@ -79,21 +83,25 @@ export default {
                  action:()=>{
                   console.log(1)
                  },
-                 icon: 'icon-edit'
+                 icon: 'icon-edit',
+                  key:"edit"
                },
                {
                  name: '删除',
                  action:()=>{
                    console.log(2)
                  },
-                 icon: 'icon-delete'
+                 icon: 'icon-delete',
+                  key:"delete"
                },
              ],
              exchange
      }
   },
   methods: {
-
+    edit(){
+        console.log(3)
+       }
 
   },
 }
@@ -113,6 +121,7 @@ export default {
 | src |  按钮图片链接  | String | — | - |
 | menus | 按钮列表 | String     | —  | - |
 | actions | 按钮触发方法 | Array   | — | - |
+| key  与action触发方法不一样 两个选其中一个| 按钮触发Key | String   | — | - |
 | trigger | 触发方式  | "hover " "click"    | — | - |
 | name | 按钮名称 | String   | — | - |
 | icon | 按钮图标  | String   | — | - |

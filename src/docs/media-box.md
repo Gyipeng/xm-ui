@@ -9,7 +9,7 @@
 ### 基础用法
 <div class="demo-block">
   <div >
-     <xm-media-box :menus="menus" >
+     <xm-media-box title="测试图片"  :menus="menus" @edit="edit">
           <xm-media src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr">
           </xm-media>
       </xm-media-box>
@@ -23,24 +23,28 @@ export default {
         menus: [
                {
                  name: '编辑',
-                 action:()=>{
-                  console.log(1)
+                 action:(item)=>{
+                  console.log(item)
                  },
-                 icon: 'icon-edit'
+                 icon: 'icon-edit',
+                 key:'edit'
                },
                {
                  name: '删除',
                  action:()=>{
                    console.log(2)
                  },
-                 icon: 'icon-delete'
+                 icon: 'icon-delete',
+                 key:"delete"
                },
              ],
 
      }
   },
   methods: {
-
+      edit(){
+          console.log(2)
+      }
 
   },
 }
@@ -54,7 +58,7 @@ export default {
 ```html
 <div class="demo-block">
   <div >
-     <xm-media-box :menus="menus" >
+     <xm-media-box :menus="menus"   @edit="edit">
           <xm-media src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr">
           </xm-media>
       </xm-media-box>
@@ -71,7 +75,8 @@ export default {
                  action:()=>{
                   console.log(1)
                  },
-                 icon: 'icon-edit'
+                 icon: 'icon-edit',
+                  key:'edit'
                },
                {
                  name: '删除',
@@ -85,7 +90,9 @@ export default {
      }
   },
   methods: {
-
+        edit(){
+                console.log(2)
+            }
 
   },
 }
@@ -101,7 +108,8 @@ export default {
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | title | 卡片主题名称| String | — | - |
-| actions | 按钮方法 | Array   | — | - |
+| actions  | 按钮方法  | Array   | — | - |
+| key  与action 选其一| 按钮key触发emit  | String   | — | - |
 | src | 按钮图标链接| String   | — | - |
 | menus | 按钮列表 | String     | —  | - |
 | menus的其余 | buttonMore组件有详细说明 | String     | —  | - |
