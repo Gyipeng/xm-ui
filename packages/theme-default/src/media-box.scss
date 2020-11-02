@@ -7,11 +7,17 @@
   @include e(top){
     display: flex;
     justify-content: space-between;
-    padding: 5px 16px ;
+    padding:  16px ;
+  }
+  @include e(title){
+    width: 80%;
+    text-overflow:ellipsis ;
+    overflow: hidden;
+    white-space: nowrap;
   }
   @include e(content){
     width: 100%;
-    height: 151px;
+    height: 167px;
   }
 
 

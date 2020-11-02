@@ -4,6 +4,10 @@
    width: 100%;
    height: 100%;
    position: relative;
+  //position:relative;
+  //width:100%;
+  //height:0;
+  //padding-bottom:40%;
    @include e(play){
      width: 40px;
      height: 40px;
@@ -18,6 +22,14 @@
     left: 10px;
     top:10px;
     color: #ffffff;
+  }
+  video{
+    //position:absolute;
+    //left:1%;
+    //top:0;
+    //width:98%;
+    //height:144px;
+    object-fit: fill;
   }
 
 }

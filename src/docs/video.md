@@ -1,23 +1,14 @@
 # Video 视频
 ----
 ### 基础用法
-<style>
-  .xm-video{
-    width:224px;
-    height:144px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-  }
-</style>
+
 
 <div class="demo-block">
   <div >
-   <span>
-   <xm-video  src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4"  poster="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"></xm-video>
-   <span>
-   <span>
-       <xm-video src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4" ></xm-video>
-   </span>
+
+   <xm-video v-width="224" v-height="144" class="mb10" src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4"  poster="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"></xm-video>
+       <xm-video  v-width="224" v-height="144" src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4" ></xm-video>
+
 
   </div>
 </div>
@@ -25,24 +16,18 @@
 
 ::: demo
 ```html
-<style>
-  .xm-video{
-    width:224px;
-    height:144px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-</style>
+
 
 <div class="demo-block">
   <div >
    <xm-video
+   v-width="224" v-height="144"
   src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4"
    poster="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
 
    ></xm-video>
 
-     <xm-video src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4" ></xm-video>
+     <xm-video  v-width="224" v-height="144"  src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4" ></xm-video>
 
   </div>
 </div>

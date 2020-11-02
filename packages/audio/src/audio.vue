@@ -58,7 +58,7 @@ export default {
     },
     icon: {
       type: String,
-      default: 'icon-music'
+      default: ''
     },
     defaultCover: {
       type: String,

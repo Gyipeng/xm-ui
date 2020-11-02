@@ -48,13 +48,19 @@
 
 }
 @include b(mask){
-  cursor: not-allowed;
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  background: #000000;
   opacity: 0.1;
+  z-index: 1;
+  @include m(primary){
+    background: $primary-color-light;
+  }
+  @include m(disabled){
+    cursor: not-allowed;
+    background: #000000;
+  }
 
 }

@@ -18,6 +18,7 @@
 @import "button-ellipsis.css";
 @import "tabs.css";
 @import "swiper.css";
+@import "template.css";
 *{
   box-sizing: border-box;
 }

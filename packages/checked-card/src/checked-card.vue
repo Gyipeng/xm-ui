@@ -3,7 +3,7 @@
     <div :class="Cls" @click="checkedCard(label)">
       <slot>
       </slot>
-      <div  :class="{'xm-mask':disabled}"></div>
+      <div  :class="{'xm-mask xm-mask--disabled':disabled}"></div>
       <i :class="closeCls" ></i>
     </div>
 </template>
