@@ -3,6 +3,7 @@
 @include b(checked-card){
    position: relative;
    border-radius: 8px;
+   display: inline-block;
     @include when(border){
       border: 2px solid $primary-color;
     }
@@ -22,7 +23,7 @@
   cursor: pointer;
   width: 16px;
   height: 16px;
-
+  z-index: 3;
   &::before {
     position: absolute;
     right: 50%;
