@@ -54,3 +54,18 @@
   }
 
 }
+
+
+@include b(plain-card){
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 9px 0px rgba(0, 52, 99, 0.16);
+  border-radius: 8px;
+  border: 1px solid #D4D7D9;
+  @include e(des){
+    padding: 6px;
+    text-overflow:ellipsis ;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

@@ -18,6 +18,12 @@ import ButtonEllipsis from './button-ellipsis/index.js'
 import Tabs from './tabs/index.js'
 import Swiper from './swiper/index.js'
 import Template from './template/index.js'
+import Img from './img/index.js'
+import Fold from './flod/index.js'
+
+
+
+
 
 import style from '../utils/style'
 const components = [
@@ -39,7 +45,9 @@ const components = [
   ButtonEllipsis,
   Tabs,
   Swiper,
-  Template
+  Template,
+  Img,
+  Fold
 ]
 
 const directives = {
@@ -86,6 +94,8 @@ export default {
   ButtonEllipsis,
   Tabs,
   Swiper,
-  Template
+  Template,
+  Img,
+  Fold
 
 }

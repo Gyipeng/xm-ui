@@ -1,45 +1,55 @@
-
 <template>
-    <div :class="cls">
-      <div v-if="disabled||isChecked"  :class="getModelType"></div>
-      <div class="xm-template__header">
-        <div class="xm-template__title"><span class="xm-label mr5">模板ID:</span>{{id}}</div>
-        <el-checkbox v-if="isEdit" :label="label"  :disabled="disabled" style="margin-right: -10px">&nbsp</el-checkbox>
+  <div :class="cls">
+    <div v-if="disabled || isChecked" :class="getModelType"></div>
+    <div class="xm-template__header">
+      <div class="xm-template__title">
+        <span class="xm-label mr5">模板ID:</span>{{ id }}
       </div>
-      <div class="xm-template__name mt3"><span class="xm-label mr5">模板名称:</span>{{name}}</div>
-      <div></div>
-      <div class="xm-template__content">
-        <slot>
-
-        </slot>
-      </div>
-       <div class="xm-template__des">
-         <xm-button-ellipsis :data="buttons">
-         </xm-button-ellipsis>
-       </div>
-       <div class="xm-template__footer mt20">
-         <div class="xm-template__state">
-             <span class="xm-template__circle mr6" v-if="stateColor" v-bg-color="stateColor"></span>
-             <span>{{state}}</span>
-         </div>
-         <xm-button-more   :menus="menus">
-           <i class="icon-more"></i>
-         </xm-button-more>
-       </div>
+      <el-checkbox
+        v-if="isEdit"
+        :label="label"
+        :disabled="disabled"
+        style="margin-right: -10px"
+        >&nbsp</el-checkbox
+      >
     </div>
+    <div class="xm-template__name mt3">
+      <span class="xm-label mr5">模板名称:</span>{{ name }}
+    </div>
+    <div></div>
+    <div class="xm-template__content">
+      <slot> </slot>
+    </div>
+    <div class="xm-template__des">
+      <xm-button-ellipsis :data="buttons"> </xm-button-ellipsis>
+    </div>
+    <div class="xm-template__footer mt20" v-if="footer">
+      <div class="xm-template__state">
+        <span
+          class="xm-template__circle mr6"
+          v-if="stateColor"
+          v-bg-color="stateColor"
+        ></span>
+        <span>{{ state }}</span>
+      </div>
+      <xm-button-more :menus="menus">
+        <i class="icon-more"></i>
+      </xm-button-more>
+    </div>
+  </div>
 </template>
 
 <script>
-import emitter from '../../../utils/emitter.js'
-const prefix = 'xm-template'
-const classnames = require('classnames')
+import emitter from "../../../utils/emitter.js";
+const prefix = "xm-template";
+const classnames = require("classnames");
 export default {
-  name: 'xm-template',
-  componentName: 'parent',
-  data () {
+  name: "xm-template",
+  componentName: "parent",
+  data() {
     return {
       prefix
-    }
+    };
   },
   mixins: [emitter],
   props: {
@@ -53,7 +63,7 @@ export default {
     },
     modelType: {
       type: String,
-      default: 'primary'
+      default: "primary"
     },
     buttons: {
       type: Array,
@@ -61,53 +71,60 @@ export default {
     },
     stateColor: {
       type: String,
-      default: ''
+      default: ""
     },
     state: {
       type: String,
-      default: ''
+      default: ""
     },
     menus: {
       type: Array,
       default: () => []
     },
-    label: {
-    },
-    isEdit: {
-    },
+    label: {},
+    isEdit: {},
     value: {},
     id: {},
-    name: {}
-
+    name: {},
+    footer: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
-    cls () {
+    cls() {
       console.log(this);
-      const cls = classnames('xm-template', {'xm-template--disabled': this.disabled, 'xm-template--border': this.isChecked})
+      const cls = classnames("xm-template", {
+        "xm-template--disabled": this.disabled,
+        "xm-template--border": this.isChecked
+      });
 
-      return cls
+      return cls;
     },
-    getModelType () {
-      const cls = classnames('xm-mask', {'xm-mask--disabled': this.disabled, [`xm-mask--${this.modelType}`]: this.isChecked})
-      return cls
+    getModelType() {
+      const cls = classnames("xm-mask", {
+        "xm-mask--disabled": this.disabled,
+        [`xm-mask--${this.modelType}`]: this.isChecked
+      });
+      return cls;
     },
-    _checkboxGroup () {
-      let parent = this.$parent
+    _checkboxGroup() {
+      let parent = this.$parent;
       while (parent) {
-        if (parent.$options.componentName !== 'ElCheckboxGroup') {
-          parent = parent.$parent
+        if (parent.$options.componentName !== "ElCheckboxGroup") {
+          parent = parent.$parent;
         } else {
-          return parent
+          return parent;
         }
       }
-      return false
+      return false;
     },
-    store () {
-      return this._checkboxGroup ? this._checkboxGroup.value : this.value
+    store() {
+      return this._checkboxGroup ? this._checkboxGroup.value : this.value;
     },
-    isChecked () {
-      return this.store.includes(this.label)
+    isChecked() {
+      return this._checkboxGroup && this.store.includes(this.label);
     }
   }
-}
+};
 </script>

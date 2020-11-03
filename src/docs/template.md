@@ -1,6 +1,67 @@
 # Template 模版
 ----
-### 基础用法 (多选框组）
+### 基础用法
+
+
+<div class="demo-block">
+    <xm-template v-width="322"  class="mr10"
+    :buttons="data"
+    :id="123"
+    :label="123"
+     name="测试"
+    :footer="false"
+    >
+         <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
+    </xm-template>
+
+</div>
+
+::: demo
+```html
+
+
+<div class="demo-block">
+    <xm-template v-width="322"  class="mr10"
+    :buttons="data"
+    :id="123"
+    :label="123"
+     name="测试"
+    :footer="false"
+    >
+         <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
+    </xm-template>
+
+</div>
+
+<script>
+export default {
+  data() {
+    return {
+        data:[{
+             name: '标签一',
+             color: 'primary'
+           }, {
+             name: '标sdsdsddgsgs签四',
+             color: 'success'
+           }, {
+             name: '标sdsdsddgsgs签四',
+             color: 'info'
+           }
+           ],
+
+     }
+  },
+
+}
+
+</script>
+
+
+```
+:::
+
+
+### 多选框组
 
 <div class="demo-block">
     <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">
@@ -256,6 +317,7 @@ export default {
 | value / v-mode	 | 绑定值 |  string number  boolean| — | - |
 | id	 | 模版id |  string number  | — | - |
 | name	 | 模版名称 |  string number  | — | - |
+| footer	 | 是否显示底部状态 |  Boolean  | — | false |
 
 ## Template 事件
 

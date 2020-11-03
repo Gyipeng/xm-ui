@@ -103,7 +103,7 @@ export default {
   computed: {
     getInnerTextAreaStyle (targetElement) {
       return {
-        minHeight: '33px'
+        minHeight: `${this.rows * 20}px`
       }
     },
     isOver () {
@@ -111,7 +111,7 @@ export default {
     },
     count () {
       return this.value ? this.value.length : 0
-    },
+    }
   },
   methods: {
     calcNodeStyle (targetElement) {
@@ -156,14 +156,13 @@ export default {
       this.$emit('input', event.target.value)
     },
     input ($event) {
-
       this.$emit('input', $event.target.value)
     }
 
   },
   watch: {
     value (val) {
-      console.log(this);
+      console.log(this)
       this.$emit('input', val)
       this.$emit('change', val)
       if (this.isOver) this.$emit('overText', this.value)

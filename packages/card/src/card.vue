@@ -1,11 +1,16 @@
 
 <template>
-  <el-card :class="cls" :body-style="getBodyStyle">
+   <div class="xm-plain-card"  v-if="plain">
+     <xm-img v-height="126"  :title="title" :src="src"></xm-img>
+     <div class="xm-plain-card__des">  {{ desc }}</div>
+   </div>
+
+  <el-card v-else :class="cls" :body-style="getBodyStyle">
     <slot name="header"></slot>
     <slot v-if="$slots.default"></slot>
     <div v-else class="xm-card__body">
       <div class="xm-card__header">
-        <xm-media :src="src"></xm-media>
+        <xm-media :src="src" v-bind="$attrs"></xm-media>
       </div>
       <div class="xm-card__content">
         <div class="xm-card__title">
@@ -24,6 +29,7 @@
     <slot name="footer"></slot>
 
   </el-card>
+
 </template>
 
 <script>
@@ -53,8 +59,11 @@ export default {
     desc: String,
     time: String,
     actions: Array,
-    title: String
-
+    title: String,
+    plain: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     cls () {
