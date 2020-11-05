@@ -3,6 +3,7 @@
 @include b(checked-card){
    position: relative;
    border-radius: 8px;
+   display: inline-block;
     @include when(border){
       border: 2px solid $primary-color;
     }
@@ -14,21 +15,25 @@
 @include b(icon) {
   color: #ffffff;
   position: absolute;
-  font-size: 12px;
+  font-size: 18px;
   right: -8px;
-  top: -8px;
+  top: -10px;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
-  width: 16px;
-  height: 16px;
-
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  z-index: 5;
   &::before {
+    //border-radius: 50%;
+    background: #ffffff;
+    font-size: 18px;
     position: absolute;
     right: 50%;
     top: 50%;
-    margin-top: -6px;
-    margin-right: -6px;
+    margin-top: -9px;
+    margin-right: -9px;
   }
   @include m(primary) {
     background: $primary-color;
@@ -48,13 +53,30 @@
 
 }
 @include b(mask){
-  cursor: not-allowed;
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  background: #000000;
   opacity: 0.1;
-
+  z-index: 1;
+  @include m(primary){
+    background: $primary-color-light;
+  }
+  @include m(disabled){
+    cursor: not-allowed;
+    background: #000000;
+  }
+  @include m(success){
+    background: $color-success;
+  }
+  @include m(danger){
+    background: $color-danger;
+  }
+  @include m(warning){
+    background:$color-warning;
+  }
+  @include m(info){
+    background:$color-info;
+  }
 }

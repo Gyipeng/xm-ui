@@ -37,6 +37,10 @@ export const icons = [
   'icon-edit',
   'icon-play',
   'icon-stop',
-  'icon-keyB'
-
+  'icon-keyB',
+  'icon-no-o',
+  'icon-sound',
+  'icon-playB',
+  'icon-stopB',
+  'icon-yes-o',
 ]

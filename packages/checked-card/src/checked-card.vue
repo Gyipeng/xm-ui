@@ -3,8 +3,9 @@
     <div :class="Cls" @click="checkedCard(label)">
       <slot>
       </slot>
-      <div  :class="{'xm-mask':disabled}"></div>
-      <i :class="closeCls" ></i>
+      <div v-if="disabled || isChecked" :class="getModelType"></div>
+      <!--<div  :class="{'xm-mask xm-mask&#45;&#45;disabled':disabled}"></div>-->
+      <i :class="checkedCls" v-if="isChecked" ></i>
     </div>
 </template>
 
@@ -30,6 +31,10 @@ export default {
       type: Boolean,
       default: false
     },
+    modelType: {
+      type: String,
+      default: 'primary'
+    },
     size: {
       type: String,
       validator: (value) => {
@@ -42,8 +47,10 @@ export default {
       if (this.disabled) return
       if (this.isGroup) {
         this.dispatch('checkedCardGroup', 'input', val)
+        this.dispatch('checkedCardGroup', 'change', val)
       } else {
         this.$emit('input', val)
+        this.$emit('change', val)
       }
     }
 
@@ -105,12 +112,19 @@ export default {
       })
       return className
     },
-    closeCls () {
-      const className = classnames('xm-icon', 'icon-bigdown', {
+    checkedCls () {
+      const className = classnames('xm-icon', 'icon-yes-o', {
         [`xm-icon--${this.color || 'primary'}`]: this.isChecked
       })
       return this.isChecked && className
-    }
+    },
+    getModelType () {
+      const cls = classnames('xm-mask', {
+        'xm-mask--disabled': this.disabled,
+        [`xm-mask--${this.modelType}`]: this.isChecked
+      })
+      return cls
+    },
 
   }
 

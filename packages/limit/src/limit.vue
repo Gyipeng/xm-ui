@@ -3,13 +3,13 @@
   <div class="xm-limit">
     <el-input v-focus  autofocus  v-bind="$attrs" :type="type"  v-model="currentValue" @input="input" ></el-input>
     <span class="xm-limit--over" v-if="limit&&isText">
-      <span class="xm-limit__text">
+      <span class="xm-limit__text" ref="limit">
          <span class="xm-limit__count" >
                <span :class="{'xm-limit--isOver':isOver}">{{count}}</span>/<span>{{limit}}</span>
          </span>
       </span>
     </span>
-    <span class="xm-limit--textOver" v-if="limit&&!isText">
+    <span class="xm-limit--textOver" v-if="limit&&!isText" ref="limit">
      <span :class="{'xm-limit--isOver':isOver}">{{count}}</span>/<span>{{limit}}</span>
     </span>
 
@@ -44,6 +44,7 @@ export default {
     input (value) {
       this.$emit('input', value)
       this.$emit('change', value)
+
       if (this.isOver) this.$emit('overText', value)
     }
   },

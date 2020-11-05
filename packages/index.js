@@ -17,6 +17,13 @@ import ButtonMore from './button-more/index.js'
 import ButtonEllipsis from './button-ellipsis/index.js'
 import Tabs from './tabs/index.js'
 import Swiper from './swiper/index.js'
+import Template from './template/index.js'
+import Img from './img/index.js'
+import Fold from './flod/index.js'
+
+
+
+
 
 import style from '../src/utils/style'
 const components = [
@@ -37,7 +44,10 @@ const components = [
   ButtonMore,
   ButtonEllipsis,
   Tabs,
-  Swiper
+  Swiper,
+  Template,
+  Img,
+  Fold
 ]
 
 const directives = {
@@ -83,6 +93,9 @@ export default {
   ButtonMore,
   ButtonEllipsis,
   Tabs,
-  Swiper
+  Swiper,
+  Template,
+  Img,
+  Fold
 
 }

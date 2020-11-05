@@ -27,12 +27,11 @@
 </template>
 
 <script>
+import emitter from '../../../utils/emitter.js'
 export default {
   name: 'xm-button-more',
   data () {
-    return {
-
-    }
+    return {}
   },
   props: {
     menus: {
@@ -53,10 +52,31 @@ export default {
     }
 
   },
+  mixins: [emitter],
   methods: {
     menuClick (item) {
-      item.action()
-      // this.$emit(val)
+      item.action && item.action(item)
+
+      if (this.isParent) {
+        this.dispatch('parent', item.key)
+      } else {
+        this.$emit(item.key)
+      }
+    }
+  },
+  computed: {
+    isParent () {
+      let parent = this.$parent
+      while (parent) {
+        const parentComponentName = parent.$options.componentName
+        const isGroup = parentComponentName === 'parent'
+        if (isGroup) {
+          return true
+        } else {
+          parent = parent.$parent
+        }
+      }
+      return false
     }
   }
 }

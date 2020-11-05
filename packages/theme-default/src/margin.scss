@@ -1,6 +1,6 @@
 @import "./mixins/mixins.scss";
 
-@for $i from 0 through 24 {
+@for $i from 0 through 40 {
   .ml#{$i} {
     margin-left: $i+px;
   }
@@ -15,6 +15,18 @@
   }
   .fz#{$i}{
     font-size:$i+px;
+  }
+  .pl#{$i} {
+    padding-left: $i+px;
+  }
+  .pt#{$i} {
+    padding-top: $i+px;
+  }
+  .pb#{$i}{
+    padding-bottom: $i+px;
+  }
+  .pr#{$i}{
+    padding-right: $i+px;
   }
 }
 

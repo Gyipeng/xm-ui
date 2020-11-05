@@ -1,0 +1,5 @@
+@import "./mixins/mixins.scss";
+@include b(fold){
+    background:url("../../../assets/img/bg.png") no-repeat ;
+    background-position:95.5% 50%;
+}

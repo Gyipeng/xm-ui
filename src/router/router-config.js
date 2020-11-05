@@ -108,11 +108,11 @@ export const routerConfig = {
           'name': 'card',
           'path': '/card'
         },
-        // {
-        //   'desc': 'SwiperCard 轮播卡片',
-        //   'name': 'swiper-card',
-        //   'path': '/swiperCard'
-        // },
+        {
+          'desc': 'fold 折叠效果',
+          'name': 'fold',
+          'path': '/fold'
+        },
         {
           'desc': 'Swiper轮播',
           'name': 'swiper',

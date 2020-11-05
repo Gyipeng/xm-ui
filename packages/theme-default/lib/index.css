@@ -18,6 +18,11 @@
 @import "button-ellipsis.css";
 @import "tabs.css";
 @import "swiper.css";
+@import "template.css";
+@import "img.css";
+@import "fold.css";
 *{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }

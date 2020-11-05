@@ -7,8 +7,9 @@
 
     <xm-video  v-if="type.indexOf('video')>-1"  :src="src"  v-bind="$attrs"></xm-video>
 
-    <el-image v-if="type.indexOf('image')>-1" :src="src"  v-bind="$attrs"></el-image>
+    <el-image   v-width="'100%'" v-height="'100%'"  v-if="type.indexOf('image')>-1" :src="src"  v-bind="$attrs"></el-image>
 
+    <div class="xm-media__title" v-if="title">{{title}}</div>
   </div>
 
 </template>
@@ -28,6 +29,10 @@ export default {
       default: ''
     },
     defaultCover: {
+      type: String,
+      default: ''
+    },
+    title: {
       type: String,
       default: ''
     }

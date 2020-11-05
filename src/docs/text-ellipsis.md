@@ -3,7 +3,7 @@
 ### 基础用法
 <div class="demo-block">
   <div >
-  <xm-text-ellipsis  height="40" :text="text" :useTooltip="true">
+  <xm-text-ellipsis  height="40" :text="text" :useTooltip="true" >
       <template slot="more" >....</template>
   </xm-text-ellipsis>
   </div>

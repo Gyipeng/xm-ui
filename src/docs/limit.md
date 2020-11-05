@@ -1,16 +1,11 @@
-<style>
-  .xm-limit{
 
-    margin: 10px;
-  }
-</style>
 
 # limit 限制输入域
 ----
 ### 基础用法
 <div class="demo-block">
   <div >
-   <xm-limit  type="textarea" v-model="content" limit="20" placeholder="最多输入10个字符"></xm-limit>
+   <xm-limit class="mb10"  type="textarea" v-model="content" :rows="4" limit="20" placeholder="最多输入10个字符" autosize></xm-limit>
     <xm-limit  v-model="content" limit="20" placeholder="最多输入10个字符"></xm-limit>
   </div>
 </div>
@@ -21,7 +16,7 @@
 
 
 <div>
-   <xm-limit  type="textarea" v-model="content" limit="20" placeholder="最多输入10个字符">
+   <xm-limit  type="textarea" v-model="content" :row="4" limit="20" placeholder="最多输入10个字符" autosize>
 
    </xm-limit>
 

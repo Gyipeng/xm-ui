@@ -1,43 +1,69 @@
 <style>
-  .xm-card{
-    width:224px;
-
-  }
-  .xm-checked-card{
-   margin-right:10px;
-   float:left
-  }
+ .el-col-8 {
+ height:420px
+ }
 </style>
 # Card卡片
 ----
-### 基础用法
+### 基础用法 多选请给盒子高度
 <div class="demo-block">
   <div >
    <xm-checked-card-group v-model="checked">
-     <xm-checked-card label="复选框 A" :disabled="true">
-         <xm-card
-          src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-          title="测试"
-          desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
-          :actions="['测试','生物','卡','卡地方']"
-          >   </xm-card>
-      </xm-checked-card>
+    <el-col :span="8">
+    <xm-checked-card label="复选框 A" :disabled="true" >
+             <xm-card
+              v-width="244"
+              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+              title="测试"
+              desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
+              :actions="['测试','生物','卡','卡地方']"
+              >   </xm-card>
+          </xm-checked-card>
+    </el-col>
+     <el-col :span="8">
       <xm-checked-card label="复选框 B" >
-               <xm-card
-                src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-                title="测试"
-                desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
-                :actions="['测试','生物','卡','卡地方']"
-                >   </xm-card>
-      </xm-checked-card>
-        <xm-checked-card label="复选框 C" >
-                     <xm-card
-                      src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-                      title="测试"
-                      desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
-                      :actions="['测试','生物','卡','卡地方']"
-                      >   </xm-card>
-            </xm-checked-card>
+                    <xm-card
+                      v-width="244"
+                     src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                     title="测试"
+                     desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
+                     :actions="['测试','生物','卡','卡地方']"
+                     >   </xm-card>
+           </xm-checked-card>
+     </el-col>
+     <el-col :span="8" >
+   <xm-checked-card label="复选框 C" >
+                      <xm-card
+                        v-width="244"
+                       src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                       title="测试"
+                       desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
+                       :actions="['测试','生物','卡','卡地方']"
+                       >   </xm-card>
+    </xm-checked-card>
+     </el-col>
+          <el-col :span="8">
+           <xm-checked-card label="复选框 Bg" >
+                         <xm-card
+                           v-width="244"
+                          src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                          title="测试"
+                          desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
+                          :actions="['测试','生物','卡','卡地方']"
+                          >   </xm-card>
+                </xm-checked-card>
+          </el-col>
+          <el-col :span="8">
+        <xm-checked-card label="复选框 Ch" >
+                           <xm-card
+                             v-width="244"
+                            src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                            title="测试"
+                            desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
+                            :actions="['测试','生物','卡','卡地方']"
+                            >   </xm-card>
+         </xm-checked-card>
+          </el-col>
     </xm-checked-card-group>
   </div>
 </div>
@@ -59,43 +85,48 @@ export default {
 
 ::: demo
 ```html
-<style>
-  .xm-card{
-    width:224px;
 
-  }
-  .xm-checked-card{
-   margin-right:10px;
-   float:left
-  }
-</style>
+<style>
+ .el-col-8 {
+ height:420px
+ }
+ </style>
 <div class="demo-block">
   <div >
    <xm-checked-card-group v-model="checked">
-     <xm-checked-card label="复选框 A" :disabled="true" >
-         <xm-card
-          src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-          title="测试"
-          desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
-          :actions="['测试','生物','卡','卡地方']"
-          >   </xm-card>
-      </xm-checked-card>
+    <el-col :span="8">
+    <xm-checked-card label="复选框 A" :disabled="true">
+             <xm-card
+             v-width="244"
+              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+              title="测试"
+              desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
+              :actions="['测试','生物','卡','卡地方']"
+              >   </xm-card>
+          </xm-checked-card>
+    </el-col>
+     <el-col :span="8">
       <xm-checked-card label="复选框 B" >
-               <xm-card
-                src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-                title="测试"
-                desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
-                :actions="['测试','生物','卡','卡地方']"
-                >   </xm-card>
-      </xm-checked-card>
-        <xm-checked-card label="复选框 C" >
-                           <xm-card
-                            src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-                            title="测试"
-                            desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
-                            :actions="['测试','生物','卡','卡地方']"
-                            >   </xm-card>
-                  </xm-checked-card>
+                    <xm-card
+                      v-width="244"
+                     src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                     title="测试"
+                     desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
+                     :actions="['测试','生物','卡','卡地方']"
+                     >   </xm-card>
+           </xm-checked-card>
+     </el-col>
+     <el-col :span="8">
+   <xm-checked-card label="复选框 C" >
+                      <xm-card
+                        v-width="244"
+                       src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                       title="测试"
+                       desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
+                       :actions="['测试','生物','卡','卡地方']"
+                       >   </xm-card>
+    </xm-checked-card>
+     </el-col>
     </xm-checked-card-group>
   </div>
 </div>
@@ -104,12 +135,15 @@ export default {
 export default {
   data() {
     return {
-         checked:"复选框 B"
+       checked:"复选框 B"
     };
   },
 
 };
 </script>
+
+
+
 
 
 ```

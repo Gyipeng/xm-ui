@@ -10,6 +10,7 @@
      @canplay="onCanplay"
      @play="onPlay"
      class="video"
+     object-fit="contain"
      :src="src"
      style="width: 100%;height: 100%"
    >
@@ -44,7 +45,7 @@ export default {
     },
     icon: {
       type: String,
-      default: 'icon-video'
+      default: ''
     },
 
   },

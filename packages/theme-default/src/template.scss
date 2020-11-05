@@ -1,0 +1,55 @@
+@import "./mixins/mixins.scss";
+@include b(template){
+   position: relative;
+   border-radius: 8px;
+   padding:16px;
+   display: inline-block;
+   z-index: 1;
+   border: 2px solid $border-color--grey;
+   @include m(border){
+     border: 2px solid $border-color--primary;
+   }
+  @include e(header){
+    display: flex;
+    justify-content: space-between;
+  }
+  @include e(content){
+    display: flex;
+    justify-content: center;
+    padding: 23px 0;
+  }
+  @include e(state){
+    display: flex;
+    align-items: center;
+  }
+  @include e(circle){
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #FF404F;
+  }
+  @include e(footer){
+    display: flex;
+    justify-content: space-between;
+
+  }
+  @include e(title){
+    width: 80%;
+    text-overflow:ellipsis ;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  @include e(name){
+    width: 80%;
+    text-overflow:ellipsis ;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+
+
+
+}
+@include b(label){
+  color: $color-info-light;
+}
