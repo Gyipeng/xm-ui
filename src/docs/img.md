@@ -3,14 +3,15 @@
 ### 基础用法
 
 <div class="demo-block">
-  <xm-img v-width="250" title="空中列车卷二车厢少有的是空哦" :src="src"></xm-img>
+  <xm-img v-width="250" v-height="144" title="空中列车卷二车厢少有的是空哦" :src="src"></xm-img>
+
 </div>
 
 <script>
   export default {
     data() {
       return {
-        src: 'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg'
+        src: 'http://124.42.103.156:8089/group1/M00/12/8C/CgrQc1-ffv-AWFh1AAApsORQfjg796.jpg'
       }
     }
   }
@@ -20,7 +21,7 @@
 ```html
 
 <div class="demo-block">
-  <xm-img v-width="250" title="空中列车卷二车厢少有的是空哦" :src="src"><xm-img>
+  <xm-img v-width="250" v-height="144" title="空中列车卷二车厢少有的是空哦" :src="src"><xm-img>
 </div>
 
 <script>

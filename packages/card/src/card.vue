@@ -2,7 +2,7 @@
 <template>
    <div class="xm-plain-card"  v-if="plain">
 
-     <xm-media v-height="126"  :title="title" :src="src"></xm-media>
+     <xm-media v-height="126"  :title="title" :src="src" v-bind="$attrs"></xm-media>
      <div class="xm-plain-card__des">  {{ desc }}</div>
    </div>
 

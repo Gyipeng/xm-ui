@@ -57,7 +57,7 @@
      </xm-media>
      <xm-media class="xm-media-demo" src="http://124.42.103.156:8089/group1/M00/12/29/CgrQc176_fOAfWl1ACVUV6IVQhs429.mp4" title="呜呜呜呜呜呜呜呜">
      </xm-media>
-     <xm-media  class="xm-media-demo" src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" title="呜呜呜呜呜呜呜呜">
+     <xm-media  class="xm-media-demo" src="http://124.42.103.156:8089/group1/M00/12/8C/CgrQc1-ffv-AWFh1AAApsORQfjg796.jpg" title="呜呜呜呜呜呜呜呜">
      </xm-media>
 
   </div>

@@ -2,8 +2,8 @@
   <div :class="cls">
     <div v-if="disabled || isChecked" :class="getModelType"></div>
     <div class="xm-template__header">
-      <div class="xm-template__title">
-        <span class="xm-label mr5">模板ID:</span>{{ id }}
+      <div class="xm-template__name mt3">
+        <span class="xm-label mr5">模板名称:</span>{{ name }}
       </div>
       <el-checkbox
         v-if="isEdit"
@@ -13,8 +13,8 @@
         >&nbsp</el-checkbox
       >
     </div>
-    <div class="xm-template__name mt3">
-      <span class="xm-label mr5">模板名称:</span>{{ name }}
+    <div class="xm-template__title">
+      <span class="xm-label mr5">模板ID:</span>{{ id }}
     </div>
     <div></div>
     <div class="xm-template__content">
@@ -40,16 +40,16 @@
 </template>
 
 <script>
-import emitter from "../../../utils/emitter.js";
-const prefix = "xm-template";
-const classnames = require("classnames");
+import emitter from '../../../utils/emitter.js'
+const prefix = 'xm-template'
+const classnames = require('classnames')
 export default {
-  name: "xm-template",
-  componentName: "parent",
-  data() {
+  name: 'xm-template',
+  componentName: 'parent',
+  data () {
     return {
       prefix
-    };
+    }
   },
   mixins: [emitter],
   props: {
@@ -63,7 +63,7 @@ export default {
     },
     modelType: {
       type: String,
-      default: "primary"
+      default: 'primary'
     },
     buttons: {
       type: Array,
@@ -71,11 +71,11 @@ export default {
     },
     stateColor: {
       type: String,
-      default: ""
+      default: ''
     },
     state: {
       type: String,
-      default: ""
+      default: ''
     },
     menus: {
       type: Array,
@@ -92,39 +92,39 @@ export default {
     }
   },
   computed: {
-    cls() {
-      console.log(this);
-      const cls = classnames("xm-template", {
-        "xm-template--disabled": this.disabled,
-        "xm-template--border": this.isChecked
-      });
+    cls () {
+      console.log(this)
+      const cls = classnames('xm-template', {
+        'xm-template--disabled': this.disabled,
+        'xm-template--border': this.isChecked
+      })
 
-      return cls;
+      return cls
     },
-    getModelType() {
-      const cls = classnames("xm-mask", {
-        "xm-mask--disabled": this.disabled,
+    getModelType () {
+      const cls = classnames('xm-mask', {
+        'xm-mask--disabled': this.disabled,
         [`xm-mask--${this.modelType}`]: this.isChecked
-      });
-      return cls;
+      })
+      return cls
     },
-    _checkboxGroup() {
-      let parent = this.$parent;
+    _checkboxGroup () {
+      let parent = this.$parent
       while (parent) {
-        if (parent.$options.componentName !== "ElCheckboxGroup") {
-          parent = parent.$parent;
+        if (parent.$options.componentName !== 'ElCheckboxGroup') {
+          parent = parent.$parent
         } else {
-          return parent;
+          return parent
         }
       }
-      return false;
+      return false
     },
-    store() {
-      return this._checkboxGroup ? this._checkboxGroup.value : this.value;
+    store () {
+      return this._checkboxGroup ? this._checkboxGroup.value : this.value
     },
-    isChecked() {
-      return this._checkboxGroup && this.store.includes(this.label);
+    isChecked () {
+      return this._checkboxGroup && this.store.includes(this.label)
     }
   }
-};
+}
 </script>

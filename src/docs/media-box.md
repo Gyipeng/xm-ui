@@ -7,7 +7,7 @@
      <xm-media-box title="测试图片"  :menus="menus" @edit="edit" v-width="236">
           <xm-media src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3">
           </xm-media>
-      </xm-media-box>
+     </xm-media-box>
         <xm-media-box title="测试图片"  :menus="menus" @edit="edit" v-width="236">
                 <xm-media src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4" poster="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg">
                 </xm-media>
