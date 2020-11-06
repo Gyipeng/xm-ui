@@ -1,9 +1,10 @@
 @import "./mixins/mixins.scss";
 @include b(button-ellipsis){
   position: relative;
-  display: flex;
-  overflow: hidden;
+  //display: flex;
+  //overflow: hidden;
   //align-items: center;
+  text-align: center;
   @include e(button){
     display: inline-block;
     margin-right: 5px;
@@ -13,8 +14,8 @@
 
   }
   @include e(number){
-    height: 28px;
-    line-height: 28px;
+    height: 30px;
+    line-height: 30px;
     padding: 0 7px;
     font-size: 12px;
     display: inline-block;

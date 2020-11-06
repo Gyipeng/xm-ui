@@ -124,7 +124,7 @@ export default {
         [`xm-mask--${this.modelType}`]: this.isChecked
       })
       return cls
-    },
+    }
 
   }
 
