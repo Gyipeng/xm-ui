@@ -1,4 +1,4 @@
-# ButtonEllipsis 按钮省略
+# Chat 聊天框
 ----
 ### 基础用法
 <div class="demo-block">

@@ -1,6 +1,6 @@
 
 <template>
-  <div class="xm-button-ellipsis"  >
+  <div class="xm-button-ellipsis"   >
       <span   :key="index"  v-for="(item,index) in buttonList" class="xm-button-ellipsis__button">
           <slot v-if="getComp"  :item="item" ></slot>
           <xm-tag v-else v-bind="$attrs">{{item.name}}</xm-tag>
@@ -15,8 +15,9 @@ export default {
   name: 'xm-button-ellipsis',
   data () {
     return {
-      count: 0,
-      buttonList: this.data
+      total: this.data.length,
+      buttonList: this.data,
+      count: 0
     }
   },
   props: {
@@ -31,13 +32,13 @@ export default {
   },
   mounted () {
     this.init()
-
   },
   methods: {
     init () {
       this.limitShow()
     },
     limitShow () {
+      console.log(1)
       this.$nextTick(() => {
         let buttons = this.$el.querySelector('.xm-button-ellipsis__button')
         let height = this.height
@@ -49,9 +50,13 @@ export default {
 
             if (ellipsis.offsetHeight > height && n > 0) {
               if (ellipsis.offsetHeight > height * 3) {
-                this.buttonList = arr = arr.slice(0, Math.floor(arr.length / 2))
+                // this.buttonList.splice(Math.floor(arr.length / 2), Math.floor(arr.length / 2))
+
+                this.buttonList = this.buttonList.slice(0, Math.floor(this.buttonList.length / 2))
               } else {
-                this.buttonList = arr = arr.slice(0, arr.length - 1)
+                // this.buttonList.splice(arr.length - 1, 1)
+
+                this.buttonList = this.buttonList.slice(0, this.buttonList.length - 1)
               }
               // n--
             }
@@ -60,7 +65,7 @@ export default {
           }
         }
       })
-    },
+    }
   },
   computed: {
     style () {
@@ -73,8 +78,8 @@ export default {
   },
   watch: {
     buttonList () {
-      this.count = this.data.length - this.buttonList.length
-      this.init()
+      this.count = this.total - this.buttonList.length
+      this.limitShow()
     }
   }
 }
