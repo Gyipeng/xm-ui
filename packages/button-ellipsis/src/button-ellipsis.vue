@@ -23,7 +23,7 @@ export default {
   props: {
     height: {
       type: [Number, String],
-      default: 30
+      default: 32
     },
     data: {
       type: Array,
@@ -38,7 +38,7 @@ export default {
       this.limitShow()
     },
     limitShow () {
-      console.log(1)
+
       this.$nextTick(() => {
         let buttons = this.$el.querySelector('.xm-button-ellipsis__button')
         let height = this.height
@@ -46,6 +46,7 @@ export default {
         let n = 999
         if (buttons) {
           if (ellipsis.offsetHeight > height) {
+            console.log(1);
             let arr = this.buttonList
 
             if (ellipsis.offsetHeight > height && n > 0) {
