@@ -20,7 +20,7 @@ import Swiper from './swiper/index.js'
 import Template from './template/index.js'
 import Img from './img/index.js'
 import Fold from './flod/index.js'
-
+import Chat from './chat/index.js'
 
 
 
@@ -47,7 +47,8 @@ const components = [
   Swiper,
   Template,
   Img,
-  Fold
+  Fold,
+  Chat
 ]
 
 const directives = {
@@ -96,6 +97,7 @@ export default {
   Swiper,
   Template,
   Img,
-  Fold
+  Fold,
+  Chat
 
 }

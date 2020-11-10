@@ -1,0 +1,56 @@
+
+<template>
+  <div :class="cls" >
+    <div class="Message-content" >
+      <el-avatar class="Avatar" shape="square" v-if="user&&user.avatar"   :src="user.avatar" ></el-avatar>
+      <bubble v-if="type==='text'" :content="content.text"></bubble>
+      <systemMessage v-else-if="type==='system'" v-bind="content" ></systemMessage>
+      <component class="Bubble " v-else v-bind:is="type" v-bind="content" ></component>
+    </div>
+    <div  class="Message-meta">
+      {{time}}
+    </div>
+  </div>
+</template>
+
+<script>
+import bubble from './bubble.vue'
+import systemMessage from './systemMessage.vue'
+const classnames = require('classnames')
+export default {
+  name: 'message',
+  data () {
+    return {}
+  },
+  props: {
+    time: {
+      type: String,
+      default: ''
+    },
+    type: {
+      type: String,
+      default: 'text'
+    },
+    user: Object,
+    content: Object,
+    position: {
+      type: String,
+      default: 'left'
+    }
+  },
+  computed: {
+    cls () {
+      const className = classnames('Message', {
+        [this.position]: true
+      })
+      return className
+    }
+  },
+  components: {
+    bubble, systemMessage
+  },
+  created () {
+
+  }
+}
+</script>

@@ -21,6 +21,8 @@
 @import "template.css";
 @import "img.css";
 @import "fold.css";
+@import "chat.css";
+@import "bubble.css";
 *{
   box-sizing: border-box;
   margin: 0;

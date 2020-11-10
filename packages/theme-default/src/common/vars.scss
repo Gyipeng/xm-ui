@@ -58,6 +58,7 @@ font/
 
 $font-size:14px;
 
+$font-family: PingFangSC-Regular, PingFang SC;
 
 /**
 template
@@ -67,8 +68,17 @@ $border-color--primary:#3199F5;
 
 
 /**
-/
+/chat
  */
+
+$bubble-left-border-radius:8px;
+$bubble-left-bg:#D4D7D9;
+$chat-bg:#FAFBFC;
+$chat-container-border:#D4D7D9;
+$chat-time-color:#909599;
+$chat-time-font-size:12px;
+$bubble-right-bg:#D6ECFF;
+
 
 
 /* Break-point
