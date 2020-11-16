@@ -3,9 +3,10 @@
   <div :class="cls" >
     <div class="Message-content" >
       <el-avatar class="Avatar" shape="square" v-if="user&&user.avatar"   :src="user.avatar" ></el-avatar>
-      <bubble v-if="type==='text'" :content="content.text"></bubble>
+      <expandComponent v-if="renderEl" :render="renderEl" v-bind="content"   ></expandComponent>
+      <bubble v-else-if="type==='text'" :content="content.text"></bubble>
       <systemMessage v-else-if="type==='system'" v-bind="content" ></systemMessage>
-      <component class="Bubble " v-else v-bind:is="type" v-bind="content" ></component>
+      <component v-height="content.height" v-width="content.width" class="Bubble " v-else v-bind:is="type" v-bind="content" ></component>
     </div>
     <div  class="Message-meta">
       {{time}}
@@ -16,6 +17,7 @@
 <script>
 import bubble from './bubble.vue'
 import systemMessage from './systemMessage.vue'
+import expandComponent from './expandComponent.vue'
 const classnames = require('classnames')
 export default {
   name: 'message',
@@ -36,7 +38,8 @@ export default {
     position: {
       type: String,
       default: 'left'
-    }
+    },
+    renderEl: Function
   },
   computed: {
     cls () {
@@ -47,10 +50,10 @@ export default {
     }
   },
   components: {
-    bubble, systemMessage
+    bubble, systemMessage, expandComponent
   },
   created () {
-
+    console.log(this)
   }
 }
 </script>

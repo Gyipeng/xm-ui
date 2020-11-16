@@ -34,7 +34,7 @@
         plain > </xm-card>
      <xm-card  v-width="196"  class="mb10" title="测试" desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
       src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"
-      plain > </xm-card>
+      plain > 尊敬的客户：感谢您参加流量大放送活动，恭喜您获得空中列车卷二——车厢少 </xm-card>
     </div>
 </div>
 
@@ -64,5 +64,6 @@
 | desc | 卡片描述 | String     | —  | - |
 | actions | 卡片按钮名称 | Array   | — | - |
 | src | 图片链接 音频链接 或者视频链接| String   | — | - |
+| slot | 插槽 添加你的描述内容| String   | — | - |
 | plain |朴素卡片| String   | — | - |
 | other | 其他属性请移步媒体组件| String   | — | - |

@@ -21,9 +21,7 @@ import Template from './template/index.js'
 import Img from './img/index.js'
 import Fold from './flod/index.js'
 import Chat from './chat/index.js'
-
-
-
+import Permission from './permission/index.js'
 
 import style from '../utils/style'
 const components = [
@@ -48,7 +46,8 @@ const components = [
   Template,
   Img,
   Fold,
-  Chat
+  Chat,
+  Permission
 ]
 
 const directives = {
@@ -98,6 +97,7 @@ export default {
   Template,
   Img,
   Fold,
-  Chat
+  Chat,
+  Permission
 
 }

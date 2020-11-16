@@ -1,7 +1,7 @@
 
 <template>
   <div class="xm-img">
-    <el-image v-width="'100%'"  v-height="'100%'"  v-bind="$attrs"></el-image>
+    <el-image v-width="'100%'"  v-height="'100%'"  v-bind="$attrs" :src="src"></el-image>
     <div class="xm-img__title" v-if="title">{{title}}</div>
   </div>
 </template>
@@ -15,7 +15,11 @@ export default {
     }
   },
   props: {
-    title: String
+    title: String,
+    src: String
+  },
+  created () {
+    console.log(this)
   }
 }
 </script>

@@ -23,7 +23,7 @@
 @import "fold.css";
 @import "chat.css";
 @import "bubble.css";
-*{
+*,:after,:before{
   box-sizing: border-box;
   margin: 0;
   padding: 0;

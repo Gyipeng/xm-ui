@@ -46,7 +46,7 @@ export default {
         let n = 999
         if (buttons) {
           if (ellipsis.offsetHeight > height) {
-            console.log(1);
+
             let arr = this.buttonList
 
             if (ellipsis.offsetHeight > height && n > 0) {

@@ -3,7 +3,11 @@
    <div class="xm-plain-card"  v-if="plain">
 
      <xm-media v-height="126"  :title="title" :src="src" v-bind="$attrs"></xm-media>
-     <div class="xm-plain-card__des">  {{ desc }}</div>
+     <div class="xm-plain-card__container">
+       <div class="xm-plain-card__des">  {{ desc }}</div>
+       <!--<div class="xm-plain-card__content" ><slot></slot></div>-->
+     </div>
+
    </div>
 
   <el-card v-else :class="cls" :body-style="getBodyStyle">
