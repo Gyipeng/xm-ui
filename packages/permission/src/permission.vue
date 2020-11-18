@@ -27,6 +27,7 @@
           <el-checkbox v-if="scope.row[1]"
                        :checked="getCheckbox(scope.row[1])"
                        :indeterminate="getIndeterminate(scope.row[1])"
+                       @change="(e)=>onChange(e,scope.row[1])"
           >{{scope.row[1]}}</el-checkbox>
         </template>
       </el-table-column>
@@ -36,7 +37,7 @@
         <template slot-scope="scope">
           <el-checkbox v-if="scope.row[2]"
                        :checked="getCheckbox(scope.row[2])"
-
+                       @change="(e)=>onChange(e,scope.row[2])"
           >{{scope.row[2]}}</el-checkbox>
         </template>
       </el-table-column>
@@ -130,7 +131,6 @@ export default {
     this.dataSource = this.encodeData(TestData)
     this.max = this.getMax(TestData)
     this.childrenMap = this.getChildrenMap(TestData)
-    console.log(this.childrenMap)
   },
   computed: {
     cls () {
@@ -237,22 +237,36 @@ export default {
       }
     },
     onChange (e, key) {
+
+      if (!this.childrenMap[key]) {
+        return this.lastCheck(e, key)
+      }
       if (e === true) {
         this.checkAll(key)
-      }else {
+      } else {
         this.checkNotAll(key)
       }
-      console.log(e, key, this.dataSource, this.childrenMap)
     },
     checkAll (key) { // 全选
-      this.checkedKeys = this.checkedKeys.concat(this.childrenMap[key])
+      this.checkedKeys = this.checkedKeys.concat(this.childrenMap[key].filter((item) => !this.checkedKeys.includes(item)))
       ++this.menuKey
-
-      console.log(this.checkedKeys)
     },
     checkNotAll (key) { // 全不选
-
+      this.checkedKeys = this.checkedKeys.concat(this.childrenMap[key]).filter((item) => {
+        return this.checkedKeys.includes(item) && !this.childrenMap[key].includes(item)
+      }
+      )
+      ++this.menuKey
+    },
+    lastCheck (e, key) {
+      if (e) {
+        this.checkedKeys.push(key)
+      } else {
+        this.checkedKeys = this.checkedKeys.filter(item => item !== key)
+      }
+      ++this.menuKey
     }
+
   }
 }
 </script>

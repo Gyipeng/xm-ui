@@ -2,10 +2,7 @@
 <template>
   <div class="SystemMessage">
     <xm-template v-width="322"
-                 :buttons="data"
-                 :id="123"
-                 :label="123"
-                 name="测试"
+                 v-bind="$attrs"
                  :footer="false"
     >
       <xm-fold v-width="207"  v-if="type==='card'">

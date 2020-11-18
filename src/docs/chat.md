@@ -27,7 +27,20 @@ export default {
                        type: 'card',
                        title: '测试',
                        desc: '尊敬的客户：感谢您参加流量大放送活动，恭喜您获得' ,
-                       plain: true
+                       plain: true,
+                       name:"哈哈哈哈哈",
+                       id:"1545454",
+                       buttons:[{
+                             name: '标签一',
+                             color: 'primary'
+                           }, {
+                             name: '标sdsdsddgsgs签四',
+                             color: 'success'
+                           }, {
+                             name: '标sdsdsddgsgs签四',
+                             color: 'info'
+                           }
+                                  ]
                      },
                      user: { avatar: '//gw.alicdn.com/tfs/TB1DYHLwMHqK1RjSZFEXXcGMXXa-56-62.svg' },
                      position: 'right',
@@ -71,7 +84,7 @@ export default {
 
 <div class="demo-block">
 
-  <xm-chat  :messages="messages"></xm-chat>
+  <xm-chat  :messages="messages" title="139****7777(用户1备注)" ></xm-chat>
 
 </div>
 <script>
@@ -95,7 +108,9 @@ export default {
                        type: 'card',
                        title: '测试',
                        desc: '尊敬的客户：感谢您参加流量大放送活动，恭喜您获得' ,
-                       plain: true
+                       plain: true,
+                       name:"哈哈哈哈哈",
+                       id:"1545454"
                      },
                      user: { avatar: '//gw.alicdn.com/tfs/TB1DYHLwMHqK1RjSZFEXXcGMXXa-56-62.svg' },
                      position: 'right',
@@ -103,6 +118,7 @@ export default {
                    },
                    {
                      id :3,
+                     type: 'system',
                      renderEl : (h, params)=>{
                            params.style={width: '224px', height: '144px' }
                            params.attrs={title:'123',src: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',}
@@ -127,7 +143,6 @@ export default {
 }
 
 </script>
-
 
 
 
