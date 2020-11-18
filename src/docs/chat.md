@@ -110,7 +110,18 @@ export default {
                        desc: '尊敬的客户：感谢您参加流量大放送活动，恭喜您获得' ,
                        plain: true,
                        name:"哈哈哈哈哈",
-                       id:"1545454"
+                       id:"1545454",
+                        buttons:[{
+                             name: '标签一',
+                             color: 'primary'
+                           }, {
+                             name: '标sdsdsddgsgs签四',
+                             color: 'success'
+                           }, {
+                             name: '标sdsdsddgsgs签四',
+                             color: 'info'
+                                  }
+                                 ]
                      },
                      user: { avatar: '//gw.alicdn.com/tfs/TB1DYHLwMHqK1RjSZFEXXcGMXXa-56-62.svg' },
                      position: 'right',
