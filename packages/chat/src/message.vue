@@ -44,7 +44,7 @@ export default {
   computed: {
     cls () {
       const className = classnames('Message', {
-        [this.position]: true
+        [`xm-${this.position}`]: true
       })
       return className
     }

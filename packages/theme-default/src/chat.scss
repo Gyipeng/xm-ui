@@ -34,7 +34,7 @@
   & + & {
     margin-top: 24px;
   }
-  &.left {
+  &.xm-left {
     animation: msgLeft .5s ease-in-out;
 
     .Bubble {
@@ -44,7 +44,7 @@
 
     }
   }
-  &.right {
+  &.xm-right {
     animation: msgRight .5s ease-in-out;
 
     .Message-content {

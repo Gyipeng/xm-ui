@@ -3,7 +3,6 @@
   <div class="xm-chat">
     <div class="xm-chat__title">{{title}}</div>
     <div class="xm-chat__container">
-
       <message v-for="message in messages"   v-bind="message" :key="messages.id"  ></message>
     </div>
   </div>
