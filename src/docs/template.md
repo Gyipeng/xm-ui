@@ -78,6 +78,7 @@ export default {
     :state="item.state"
     :isEdit="item.isEdit"
     :disabled="item.disabled"
+    footer
     :stateColor="item.stateColor"
     >
          <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
@@ -196,6 +197,7 @@ export default {
     :state="item.state"
     :isEdit="item.isEdit"
     :disabled="item.disabled"
+    footer
     :stateColor="item.stateColor"
     >
          <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>

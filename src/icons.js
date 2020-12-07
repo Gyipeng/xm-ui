@@ -1,4 +1,6 @@
 export const icons = [
+  "icon-Cha",
+  "icon-gou",
   'icon-more',
   'icon-base-management',
   'icon-Business-manegement',

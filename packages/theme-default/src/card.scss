@@ -4,6 +4,7 @@
 @include b(card){
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0px 0px 12px 0px rgba(0, 52, 99, 0.16);
   @include e(header){
     height: 144px;
     overflow: hidden;
@@ -51,6 +52,32 @@
     //line-height: 16px;
     text-align: center;
     padding:8px ;
+  }
+  @include m(small){
+   &-container{
+     padding: 16px;
+     background: #ffffff;
+   }
+    &-title{
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      text-shadow: 0px 0px 12px rgba(0, 52, 99, 0.16);
+      color: #303233;
+      font-weight: 500;
+    }
+    &-des{
+      margin-top: 8px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      font-size: 14px;
+      line-height: 22px;
+      color: #303233;
+      text-shadow: 0px 0px 12px rgba(0, 52, 99, 0.16);
+    }
   }
 
 }

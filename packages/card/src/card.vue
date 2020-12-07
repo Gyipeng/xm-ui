@@ -1,16 +1,22 @@
 
 <template>
-   <div class="xm-plain-card"  v-if="plain">
+   <div class="xm-plain-card"  v-if="plain||size==='mini'">
 
      <xm-media v-height="126"  :title="title" :src="src" v-bind="$attrs"></xm-media>
-     <div class="xm-plain-card__container">
+     <div class="xm-plain-card__container" :style="bodyStyle">
        <div class="xm-plain-card__des">  {{ desc }}</div>
        <!--<div class="xm-plain-card__content" ><slot></slot></div>-->
      </div>
-
+   </div>
+   <div :class="cls" v-else-if="size==='small'">
+     <xm-media v-height="144"  :src="src" v-bind="$attrs"></xm-media>
+     <div class="xm-card--small-container" :style="bodyStyle">
+        <div class="xm-card--small-title">{{title}}</div>
+        <div class="xm-card--small-des">{{ desc }}</div>
+     </div>
    </div>
 
-  <el-card v-else :class="cls" :body-style="getBodyStyle">
+   <el-card v-else :class="cls" :body-style="getBodyStyle">
     <slot name="header"></slot>
     <slot v-if="$slots.default"></slot>
     <div v-else class="xm-card__body">
@@ -68,11 +74,17 @@ export default {
     plain: {
       type: Boolean,
       default: false
+    },
+    size: {
+      type: String,
+      validator: (value) => {
+        return ['medium', 'small', 'mini'].indexOf(value) !== -1
+      }
     }
   },
   computed: {
     cls () {
-      const className = classnames('xm-card')
+      const className = classnames('xm-card', {[`xm-card--${this.size}`]: !!this.size})
       return className
     },
     getBodyStyle () {

@@ -16,7 +16,7 @@ export default {
   },
   mounted () {
     this.$nextTick(() => {
-      this.height = this.$el.offsetHeight * 0.85
+      this.height = this.$el.offsetHeight * 0.87
       let dom = this.$el.querySelector('.xm-fold__shadow')
       dom.style.height = this.height + 'px'
     })

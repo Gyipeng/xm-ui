@@ -13,7 +13,6 @@
 
 }
 @include b(icon) {
-  color: #ffffff;
   position: absolute;
   font-size: 18px;
   right: -8px;
@@ -26,14 +25,15 @@
   overflow: hidden;
   z-index: 5;
   &::before {
+    color: #ffffff;
     //border-radius: 50%;
-    background: #ffffff;
-    font-size: 18px;
+    //background: #ffffff;
+    font-size: 16px;
     position: absolute;
     right: 50%;
     top: 50%;
-    margin-top: -9px;
-    margin-right: -9px;
+    margin-top: -8px;
+    margin-right: -8px;
   }
   @include m(primary) {
     background: $primary-color;

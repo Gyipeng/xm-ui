@@ -113,7 +113,7 @@ export default {
       return className
     },
     checkedCls () {
-      const className = classnames('xm-icon', 'icon-yes-o', {
+      const className = classnames('xm-icon', 'icon-gou', {
         [`xm-icon--${this.color || 'primary'}`]: this.isChecked
       })
       return this.isChecked && className

@@ -6,6 +6,7 @@
   border-radius: 4px;
   background-color: #fff;
   display: flex;
+  position: relative;
   @include e(inner){
     flex: 1;
     -webkit-appearance: none;
@@ -32,6 +33,15 @@
   }
   @include m(isOver){
     color: red;
+  }
+  @include e(tip){
+    font-size: 12px;
+    color: #FF404F;
+    line-height: 1;
+    padding-top: 4px;
+    position: absolute;
+    top: 100%;
+    left: 12px;
   }
 }
 

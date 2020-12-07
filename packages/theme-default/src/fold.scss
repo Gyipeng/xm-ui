@@ -5,9 +5,7 @@
     display: flex;
     align-items: center;
     @include e(shadow){
-
       width: 12px;
-
       border-radius: 0  6px 6px 0;
       background: #F7F9FA;
       border: 1px solid #D4D7D9;
