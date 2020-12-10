@@ -167,7 +167,7 @@ export default {
   },
   watch: {
     value (val) {
-      console.log(this)
+
       this.$emit('input', val)
       this.$emit('change', val)
       if (this.isOver) this.$emit('overText', this.value)

@@ -93,7 +93,6 @@ export default {
   },
   computed: {
     cls () {
-      console.log(this)
       const cls = classnames('xm-template', {
         'xm-template--disabled': this.disabled,
         'xm-template--border': this.isChecked

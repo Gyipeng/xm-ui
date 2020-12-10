@@ -24,6 +24,7 @@ import Chat from './chat/index.js'
 import Permission from './permission/index.js'
 
 import style from '../utils/style'
+import filters from '../utils/filter'
 const components = [
   Button,
   Tag,
@@ -67,6 +68,10 @@ const install = function (Vue) {
 
   Object.keys(directives).forEach(key => {
     Vue.directive(key, directives[key])
+  })
+
+  Object.keys(filters).forEach(key => {
+    Vue.filter(key, filters[key])
   })
 }
 
