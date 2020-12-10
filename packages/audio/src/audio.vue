@@ -43,7 +43,7 @@ export default {
   },
   props: {
     src: String,
-    palyImg: {
+    playImg: {
       type: String,
       default: play
 
@@ -71,7 +71,7 @@ export default {
       return classnames('xm-audio', {'xm-audio--disabled': this.playing})
     },
     palyOrStop () {
-      return this.audio.playing ? this.stopImg : this.palyImg
+      return this.audio.playing ? this.stopImg : this.playImg
     },
     style () {
       if (this.cover) {

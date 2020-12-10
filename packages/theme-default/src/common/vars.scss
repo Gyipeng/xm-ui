@@ -42,7 +42,13 @@ $animation-time : .3s;
 /**
 tag
  */
+$color-blue:#EBF6FF;
+$color-blue-dark:#000000;
+$color-blue-light:#C8C9CC;
 
+$color-plain:#FFFFFF;
+$color-plain-color:#606366;
+$color-plain-border:#AEB1B3;
 
 
 /**
@@ -58,6 +64,7 @@ font/
 
 $font-size:14px;
 
+$font-family: PingFangSC-Regular, PingFang SC;
 
 /**
 template
@@ -67,9 +74,22 @@ $border-color--primary:#3199F5;
 
 
 /**
-/
+/chat
  */
 
+$bubble-left-border-radius:8px;
+$bubble-left-bg:#D4D7D9;
+$chat-bg:#FAFBFC;
+$chat-container-border:#D4D7D9;
+$chat-time-color:#909599;
+$chat-time-font-size:12px;
+$bubble-right-bg:#D6ECFF;
+
+
+/**
+card
+ */
+$card-title-color:#303233;
 
 /* Break-point
 --------------------------*/

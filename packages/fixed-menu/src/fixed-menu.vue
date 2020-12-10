@@ -2,6 +2,7 @@
 <template>
   <div class="xm-fixed-menu">
     <xm-phone>
+      <template  slot="footer">
        <div class="xm-fixed-menu__content">
          <!--<div class="xm-fixed-menu__items" >-->
          <div class="xm-fixed-menu is-bottom">
@@ -15,7 +16,7 @@
            </xm-pull-up-menu>
            </div>
          </div>
-
+      </template>
        <!--</div>-->
     </xm-phone>
   </div>

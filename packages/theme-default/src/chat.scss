@@ -1,0 +1,131 @@
+
+@import "./mixins/mixins.scss";
+
+@include b(chat){
+  background: $chat-bg;
+  @include e(title){
+    padding: 20px 24px ;
+    font-size: 16px;
+    border-bottom: 1px solid $chat-container-border ;
+    font-family: $font-family;
+  }
+  @include e(container){
+     padding: 24px 20px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Message {
+  position: relative;
+
+  & + & {
+    margin-top: 24px;
+  }
+  &.xm-left {
+    animation: msgLeft .5s ease-in-out;
+
+    .Bubble {
+      margin-right: 18%;
+      border-radius: $bubble-left-border-radius;
+      background: $bubble-left-bg;
+
+    }
+  }
+  &.xm-right {
+    animation: msgRight .5s ease-in-out;
+
+    .Message-content {
+      flex-direction: row-reverse;
+
+      & > .Avatar {
+        margin-right: 0;
+        margin-left: 12px;
+      }
+    }
+    .Message-meta {
+      text-align: right;
+      margin-right: 55px;
+    }
+    .Bubble {
+      margin-left: 28%;
+      border-radius: $bubble-left-border-radius;
+      background: $bubble-right-bg;
+    }
+    .Avatar + .Bubble {
+      margin-left: 18%;
+    }
+  }
+}
+
+.Message-meta {
+  margin-bottom: 8px;
+  text-align: left;
+  margin-left: 55px;
+  color: $chat-time-color;
+  font-size: $chat-time-font-size;
+}
+
+.Message-content {
+  display: flex;
+  align-items: flex-start;
+
+  & > .Avatar {
+    flex-shrink: 0;
+    margin-right: 12px;
+  }
+}
+
+///* SystemMessage */
+//.SystemMessage {
+//  padding: 0 16px;
+//  font-size: 12px;
+//  color: var(--gray-2);
+//  text-align: center;
+//
+//  a {
+//    margin-left: 5px;
+//  }
+//}
+
+@keyframes msgLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes msgRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

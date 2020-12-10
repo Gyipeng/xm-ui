@@ -6,7 +6,7 @@
 <div class="demo-block">
   <div >
    <xm-limit class="mb10"  type="textarea" v-model="content" :rows="4" limit="20" placeholder="最多输入10个字符" autosize></xm-limit>
-    <xm-limit  v-model="content" limit="20" placeholder="最多输入10个字符"></xm-limit>
+    <xm-limit  v-model="content" tip="重复名称" limit="20" placeholder="最多输入10个字符"></xm-limit>
   </div>
 </div>
 
@@ -20,7 +20,7 @@
 
    </xm-limit>
 
-   <xm-limit  v-model="content" limit="20" placeholder="最多输入10个字符">
+   <xm-limit  v-model="content" tip="重复名称" limit="20" placeholder="最多输入10个字符">
 
    </xm-limit>
 
@@ -46,6 +46,7 @@ export default {
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | rows | 列高 | Number | — | 4 |
 | limit| Number | 长度限制 | - | 20 |
+| tip|  提示| String | - | - |
 | placeholder | 输入时需要显示的提示文案 | String | — | 请输入内容 |
 
 ## Limit 事件

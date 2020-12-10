@@ -4,6 +4,7 @@
   <div  :class="cls" >
        <span class="xm-tag__desc" @click="click"><slot></slot></span>
        <i :class="closeCls" v-if="closable" @click="close"></i>
+      <!--<img src="../../../assets/im" alt="">-->
   </div>
   </transition>
 </template>
@@ -45,7 +46,7 @@ export default {
       return className
     },
     closeCls () {
-      const className = classnames('xm-icon', 'icon-X', {
+      const className = classnames('xm-icon', 'icon-Cha', {
         [`xm-icon--${this.color || 'primary'}`]: true
       })
       return className

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?9j4fmi');
-  src:  url('fonts/icomoon.eot?9j4fmi#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?9j4fmi') format('truetype'),
-    url('fonts/icomoon.woff?9j4fmi') format('woff'),
-    url('fonts/icomoon.svg?9j4fmi#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?qf4jgd');
+  src:  url('fonts/icomoon.eot?qf4jgd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?qf4jgd') format('truetype'),
+    url('fonts/icomoon.woff?qf4jgd') format('woff'),
+    url('fonts/icomoon.svg?qf4jgd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,174 +25,141 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-no-o:before {
+.icon-Cha:before {
   content: "\e900";
-  color: #3199f5;
+}
+.icon-gou:before {
+  content: "\e901";
+}
+.icon-no-o:before {
+  content: "\e902";
 }
 .icon-sound:before {
-  content: "\e901";
-  /*color: #e6e6e6;*/
+  content: "\e903";
 }
 .icon-keyB:before {
-  content: "\e902";
-  /*color: #c0c6cc;*/
-}
-.icon-play:before {
-  content: "\e903";
-
-}
-.icon-stop:before {
   content: "\e904";
-
 }
 .icon-playB:before {
-  content: "\e903";
-  color: #3199f5;
+  content: "\e905";
 }
 .icon-stopB:before {
-  content: "\e904";
-  color: #3199f5;
+  content: "\e906";
 }
 .icon-yes-o:before {
-  content: "\e905";
-  color: #3199f5;
-}
-.icon-more:before {
-  content: "\e906";
-  /*color: #9c9c9c;*/
-}
-.icon-edit:before {
   content: "\e907";
 }
-.icon-cut:before {
+.icon-more:before {
   content: "\e908";
-  /*color: #9b9b9b;*/
 }
-.icon-file:before {
+.icon-stop:before {
   content: "\e909";
-  /*color: #979797;*/
 }
-.icon-pic_change:before {
+.icon-play:before {
   content: "\e90a";
 }
-.icon-item_change:before {
+.icon-edit:before {
   content: "\e90b";
 }
-.icon-music:before {
+.icon-cut:before {
   content: "\e90c";
-  /*color: #fff;*/
 }
-.icon-video:before {
+.icon-file:before {
   content: "\e90d";
-  /*color: #fff;*/
 }
-.icon-media-model:before {
+.icon-pic_change:before {
   content: "\e90e";
 }
-.icon-mix-model:before {
+.icon-item_change:before {
   content: "\e90f";
-  /*color: #8f9499;*/
+}
+.icon-music:before {
+  content: "\e910";
+}
+.icon-video:before {
+  content: "\e911";
+}
+.icon-media-model:before {
+  content: "\e912";
+}
+.icon-mix-model:before {
+  content: "\e913";
 }
 .icon-text-model:before {
-  content: "\e910";
-  /*color: #8f9499;*/
+  content: "\e914";
 }
 .icon-card-model:before {
-  content: "\e911";
-  /*color: #8f9499;*/
-}
-.icon-exit:before {
-  content: "\e912";
-  /*color: #888585;*/
-}
-.icon-book:before {
-  content: "\e913";
-  /*color: #768694;*/
-}
-.icon-X:before {
-  content: "\e914";
-  /*color: #d2d2d2;*/
-}
-.icon-search:before {
   content: "\e915";
 }
-.icon-left:before {
+.icon-exit:before {
   content: "\e916";
-  /*color: #646566;*/
+}
+.icon-book:before {
+  content: "\e917";
+}
+.icon-X:before {
+  content: "\e918";
+}
+.icon-search:before {
+  content: "\e919";
+}
+.icon-left:before {
+  content: "\e91a";
 }
 .icon-down:before {
-  content: "\e917";
-  /*color: #646566;*/
+  content: "\e91b";
 }
 .icon-up:before {
-  content: "\e918";
-  /*color: #646566;*/
+  content: "\e91c";
 }
 .icon-bigdown:before {
-  content: "\e919";
-  /*color: #c8cbcc;*/
+  content: "\e91d";
 }
 .icon-delete:before {
-  content: "\e91a";
-  /*color: #979797;*/
+  content: "\e91e";
 }
 .icon-question:before {
-  content: "\e91b";
-  /*color: #dfdfdf;*/
+  content: "\e91f";
 }
 .icon-com:before {
-  content: "\e91c";
-  /*color: #a7bfcc;*/
+  content: "\e920";
 }
 .icon-Key:before {
-  content: "\e91d";
-  /*color: #a7bfcc;*/
+  content: "\e921";
 }
 .icon-login-Uers:before {
-  content: "\e91e";
-  /*color: #a7bfcc;*/
+  content: "\e922";
 }
 .icon-data:before {
-  content: "\e91f";
-  /*color: #768694;*/
+  content: "\e923";
 }
 .icon-base-management:before {
-  content: "\e920";
-  /*color: #767d94;*/
+  content: "\e924";
 }
 .icon-Business-manegement:before {
-  content: "\e921";
-  /*color: #c3cdd9;*/
+  content: "\e925";
 }
 .icon-ChatBot-manegement:before {
-  content: "\e922";
-  /*color: #d8d8d8;*/
+  content: "\e926";
 }
 .icon-material:before {
-  content: "\e923";
-  /*color: #d8d8d8;*/
+  content: "\e927";
 }
 .icon-model-management:before {
-  content: "\e924";
-  /*color: #767d94;*/
+  content: "\e928";
 }
 .icon-power:before {
-  content: "\e925";
-  /*color: #768694;*/
+  content: "\e929";
 }
 .icon-report:before {
-  content: "\e926";
-  /*color: #768694;*/
+  content: "\e92a";
 }
 .icon-Ring:before {
-  content: "\e927";
-  /*color: #768694;*/
+  content: "\e92b";
 }
 .icon-sys-setting:before {
-  content: "\e928";
-  /*color: #767d94;*/
+  content: "\e92c";
 }
 .icon-user:before {
-  content: "\e929";
-  /*color: #768694;*/
+  content: "\e92d";
 }

@@ -20,12 +20,11 @@ import Swiper from './swiper/index.js'
 import Template from './template/index.js'
 import Img from './img/index.js'
 import Fold from './flod/index.js'
+import Chat from './chat/index.js'
+import Permission from './permission/index.js'
 
-
-
-
-
-import style from '../src/utils/style'
+import style from '../utils/style'
+import filters from '../utils/filter'
 const components = [
   Button,
   Tag,
@@ -47,7 +46,9 @@ const components = [
   Swiper,
   Template,
   Img,
-  Fold
+  Fold,
+  Chat,
+  Permission
 ]
 
 const directives = {
@@ -67,6 +68,10 @@ const install = function (Vue) {
 
   Object.keys(directives).forEach(key => {
     Vue.directive(key, directives[key])
+  })
+
+  Object.keys(filters).forEach(key => {
+    Vue.filter(key, filters[key])
   })
 }
 
@@ -96,6 +101,8 @@ export default {
   Swiper,
   Template,
   Img,
-  Fold
+  Fold,
+  Chat,
+  Permission
 
 }

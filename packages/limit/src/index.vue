@@ -37,6 +37,7 @@
     <span class="xm-input__count" >
       <span :class="{'xm-textarea--isOver':isOver}">{{count}}</span>/<span>{{limit}}</span>
    </span>
+    <div class="xm-input__tip" v-if="tip">{{tip}}</div>
   </div>
 
 </template>
@@ -98,6 +99,10 @@ export default {
     autosize: {
       type: Boolean,
       default: false
+    },
+    tip:{
+      type: String,
+      default: '',
     }
   },
   computed: {
@@ -162,7 +167,7 @@ export default {
   },
   watch: {
     value (val) {
-      console.log(this)
+
       this.$emit('input', val)
       this.$emit('change', val)
       if (this.isOver) this.$emit('overText', this.value)

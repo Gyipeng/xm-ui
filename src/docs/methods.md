@@ -1,5 +1,33 @@
 # Methods 全局方法
 ----
+
+
+### Filter插件
+- moment：时间
+### 时间过滤
+<div class="demo-block">
+ {{ "1500799859" | moment }}
+</div>
+
+::: demo
+```html
+
+<div>
+ {{ "1500799859" | moment }}
+</div>
+
+
+```
+:::
+
+
+
+
+
+
+
+
+
 ### Directive插件
 
 - v-width : 宽度
@@ -16,11 +44,11 @@
 
 - v-font  : 字体大小
 
-
  ### 宽度
 
 
 <div class="demo-block">
+
   <div >
     <xm-card  v-width="300"  style="margin-right: 10px" title="测试" desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
      src="http://124.42.103.156:8089/group1/M00/12/7B/CgrQc19kJVWAcDDxAAEIBi70ThQ698.amr"
@@ -32,6 +60,7 @@
 ```html
 
 <div>
+
     <xm-card
      v-width="300"
      style="margin-right: 10px"

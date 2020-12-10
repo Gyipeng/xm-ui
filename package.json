@@ -1,6 +1,6 @@
 {
   "name": "xinmei-ui",
-  "version": "1.0.17",
+  "version": "1.0.30",
   "description": "新媒组件库",
   "author": "gyp“\n\n\ngit config --global user.name gyp“ <guoyipeng@feinno.com>",
   "private": false,
@@ -24,7 +24,7 @@
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "markdown-it-container": "^3.0.0",
-    "moment": "^2.29.0",
+    "moment": "^2.29.1",
     "path": "0.12.7",
     "vue": "^2.5.2",
     "vue-awesome-swiper": "^3.1.3",

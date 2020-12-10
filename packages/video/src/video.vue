@@ -62,7 +62,6 @@ export default {
       const { target } = e
       const videos = document.getElementsByTagName('video');
       [...videos].forEach((item) => {
-        console.log(item, target);
         if (item.parentElement !== target.parentElement) {
           item.pause()
         }

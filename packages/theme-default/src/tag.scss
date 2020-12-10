@@ -50,6 +50,16 @@
     background:$color-primary-light;
     color: $color-grey-light;
   }
+  @include m(blue){
+    background:$color-blue-light;
+    color: $color-grey-light;
+  }
+  @include m(plain){
+    background:$color-plain;
+    color: $color-plain-color;
+    border: 1px solid $color-plain-border;
+
+  }
 
 
   @include b(icon) {
@@ -66,11 +76,12 @@
     height: 16px;
     opacity: 0;
     &::before {
+      color: #ffffff;
       position: absolute;
       right: 50%;
       top: 50%;
-      margin-top: -6px;
-      margin-right: -6px;
+      margin-top: -8px;
+      margin-right: -8px;
     }
     @include m(primary) {
       background: $primary-color;

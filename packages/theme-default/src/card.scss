@@ -4,6 +4,7 @@
 @include b(card){
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0px 0px 12px 0px rgba(0, 52, 99, 0.16);
   @include e(header){
     height: 144px;
     overflow: hidden;
@@ -52,6 +53,64 @@
     text-align: center;
     padding:8px ;
   }
+  @include m(small){
+   &-container{
+     padding: 16px;
+     background: #ffffff;
+   }
+    &-title{
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      text-shadow: 0px 0px 12px rgba(0, 52, 99, 0.16);
+      color: #303233;
+      font-weight: 500;
+      height: 20px;
+    }
+    &-des{
+      margin-top: 8px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      font-size: 14px;
+      line-height: 22px;
+      height:44px ;
+      color: #303233;
+      text-shadow: 0px 0px 12px rgba(0, 52, 99, 0.16);
+    }
+  }
+
+}
+
+
+@include b(plain-card){
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 9px 0px rgba(0, 52, 99, 0.16);
+  border-radius: 8px;
+  border: 1px solid #D4D7D9;
+  overflow: hidden;
+  @include e(des){
+    height: 20px;
+    line-height:20px;
+    text-overflow:ellipsis ;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  @include e(container){
+    font-size: 14px;
+    padding: 10px 10px;
+  }
+  //@include e(content){
+  //  margin-top: 5;
+  //  height: 44px;
+  //  line-height: 22px;
+  //  color: #303233;;
+  //  overflow: hidden;
+  //
+  //}
 
 }
 

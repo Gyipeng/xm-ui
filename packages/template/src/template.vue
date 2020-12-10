@@ -13,9 +13,9 @@
         >&nbsp</el-checkbox
       >
     </div>
-    <div class="xm-template__title">
-      <span class="xm-label mr5">模板ID:</span>{{ id }}
-    </div>
+    <!--<div class="xm-template__title">-->
+      <!--<span class="xm-label mr5">模板ID:</span>{{ id }}-->
+    <!--</div>-->
     <div></div>
     <div class="xm-template__content">
       <slot> </slot>
@@ -32,7 +32,7 @@
         ></span>
         <span>{{ state }}</span>
       </div>
-      <xm-button-more :menus="menus">
+      <xm-button-more :menus="menus" class="xm-template__menus">
         <i class="icon-more"></i>
       </xm-button-more>
     </div>
@@ -93,7 +93,6 @@ export default {
   },
   computed: {
     cls () {
-      console.log(this)
       const cls = classnames('xm-template', {
         'xm-template--disabled': this.disabled,
         'xm-template--border': this.isChecked

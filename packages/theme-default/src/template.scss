@@ -31,6 +31,7 @@
   @include e(footer){
     display: flex;
     justify-content: space-between;
+    position: relative;
 
   }
   @include e(title){
@@ -44,6 +45,11 @@
     text-overflow:ellipsis ;
     overflow: hidden;
     white-space: nowrap;
+  }
+  @include e(menus){
+    position: absolute;
+    right: 0;
+    z-index: 999;
   }
 
 

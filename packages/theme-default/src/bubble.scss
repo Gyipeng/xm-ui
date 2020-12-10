@@ -1,0 +1,13 @@
+@import "./mixins/mixins.scss";
+
+.Bubble {
+  padding: 11px;
+  max-width: 400px;
+  min-width: 1px;
+  background: $bubble-left-bg;
+  border-radius: 4px 20px 20px 20px;
+  & >p{
+    //height: 14px;
+    line-height: 14px;
+  }
+}

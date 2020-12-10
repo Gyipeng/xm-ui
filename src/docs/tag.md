@@ -14,7 +14,9 @@
 
   <div>
     <xm-tag> 默认标签</xm-tag>
-    <xm-tag closable> 默认标签</xm-tag>
+     <xm-tag type="blue"> 默认标签</xm-tag>
+     <xm-tag type="plain"> 默认标签</xm-tag>
+     <xm-tag closable> 默认标签</xm-tag>
   </div>
 
 </div>
@@ -24,8 +26,10 @@
 ```html
 
 <div>
-  <xm-tag>默认按钮</xm-tag>
-  <xm-tag closable>默认按钮</xm-tag>
+      <xm-tag> 默认标签</xm-tag>
+      <xm-tag type="blue"> 默认标签</xm-tag>
+      <xm-tag type="plain"> 默认标签</xm-tag>
+      <xm-tag closable> 默认标签</xm-tag>
 </div>
 
 

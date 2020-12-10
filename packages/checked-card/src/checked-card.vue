@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import emitter from '@utils/emitter.js'
+import emitter from '../../../utils/emitter.js'
 const prefix = 'xm-checked-card'
 const classnames = require('classnames')
 export default {
@@ -113,7 +113,7 @@ export default {
       return className
     },
     checkedCls () {
-      const className = classnames('xm-icon', 'icon-yes-o', {
+      const className = classnames('xm-icon', 'icon-gou', {
         [`xm-icon--${this.color || 'primary'}`]: this.isChecked
       })
       return this.isChecked && className
@@ -124,7 +124,7 @@ export default {
         [`xm-mask--${this.modelType}`]: this.isChecked
       })
       return cls
-    },
+    }
 
   }
 
