@@ -16,6 +16,13 @@
      top: 50%;
      transform: translate(-50%,-50%);
    }
+  @include e(time){
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    color: #ffffff;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+  }
 
   @include e(type){
     position: absolute;

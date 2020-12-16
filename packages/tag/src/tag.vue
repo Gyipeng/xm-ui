@@ -27,7 +27,10 @@ export default {
     color: {
       type: String,
       default: 'primary'
-    }
+    },
+    round: [Boolean],
+    border: [Boolean]
+
   },
   methods: {
     close () {
@@ -40,7 +43,9 @@ export default {
   computed: {
     cls () {
       const className = classnames('xm-tag', 'xm-tag--default', {
-        [`xm-tag--${this.type}`]: this.type
+        [`xm-tag--${this.type}`]: this.type,
+        [`is-round`]: this.round,
+        [`is-border`]:this.closable
       })
 
       return className

@@ -3,9 +3,11 @@
   <div class="xm-button-ellipsis"   >
       <span   :key="index"  v-for="(item,index) in buttonList" class="xm-button-ellipsis__button">
           <slot v-if="getComp"  :item="item" ></slot>
-          <xm-tag v-else v-bind="$attrs">{{item.name}}</xm-tag>
+          <xm-tag v-else v-bind="$attrs" round  type="plain">{{item.name}}</xm-tag>
       </span>
-     <span v-if="count" :style="style" class="xm-button-ellipsis__number" >+{{count}}</span>
+     <slot  name="number" v-if="count"  :number="'+'+count" class="xm-button-ellipsis__number" >
+       <xm-tag  round  type="plain">+{{count}}</xm-tag>
+     </slot>
   </div>
 
 </template>

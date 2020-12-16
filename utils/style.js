@@ -72,6 +72,14 @@ export default {
 
       }
     },
+    update (el, binding) {
+      let color = binding.value || binding.arg
+      if (color.startsWith('#')) {
+        el.style.backgroundColor = color
+      } else {
+
+      }
+    },
     unbind (el) {
       el.style.backgroundColor = null
     }

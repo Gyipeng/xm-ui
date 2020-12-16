@@ -13,6 +13,7 @@
              @pause="onPause"
              :src="src" >
       </audio>
+      <div class="xm-audio__time">{{this.audioDuration}}</div>
   </div>
 
 </template>
@@ -63,6 +64,10 @@ export default {
     defaultCover: {
       type: String,
       default: 'http://124.42.103.156:8089/group1/M00/12/27/CgrQc17xnbKAUi-hAAAaz4PvzBE824.png'
+    },
+    coverSize: {
+      type: String,
+      default: ''
     }
   },
   mixins: [mixin],

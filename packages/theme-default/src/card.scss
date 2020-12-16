@@ -4,7 +4,10 @@
 @include b(card){
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0px 0px 12px 0px rgba(0, 52, 99, 0.16);
+  border: 1px solid #C8CACC;
+  @include m(medium){
+
+  }
   @include e(header){
     height: 144px;
     overflow: hidden;
@@ -14,6 +17,7 @@
     }
   }
   @include e(content){
+    background: #F8F9FA;
     padding: 12px 16px 16px 16px
   }
   @include e(title){
@@ -40,7 +44,15 @@
     overflow: hidden;
   }
   @include e(footer){
-    padding-top: 8px;
+    padding-top: 11px;
+    display: flex;
+    flex-direction: column;
+  }
+  @include e(action){
+    margin-top: 8px;
+    &:first-child{
+      margin-top: 0;
+    }
 
   }
   @include m(white){
@@ -69,7 +81,7 @@
       height: 20px;
     }
     &-des{
-      margin-top: 8px;
+      margin-top: 11px;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;

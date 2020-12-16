@@ -2,14 +2,12 @@
 ----
 ### 基础用法
 
-
 <div class="demo-block">
     <xm-template v-width="322"  class="mr10"
     :buttons="data"
     :id="123"
     :label="123"
      name="测试"
-    :footer="false"
     >
          <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
     </xm-template>
@@ -26,7 +24,6 @@
     :id="123"
     :label="123"
      name="测试"
-    :footer="false"
     >
          <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
     </xm-template>
@@ -60,6 +57,49 @@ export default {
 ```
 :::
 
+### footer 插槽
+
+
+<div class="demo-block">
+    <xm-template v-width="322"  class="mr10"
+    :buttons="data"
+    :id="123"
+    :label="123"
+     name="测试"
+    >
+         <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
+          <div slot="footer" class="xm-template__footer">
+            <div>审核通过</div>
+            <div>关联关键词：5个</div>
+          </div>
+    </xm-template>
+
+</div>
+
+::: demo
+```html
+
+
+<div class="demo-block">
+    <xm-template v-width="322"  class="mr10"
+    :buttons="data"
+    :id="123"
+    :label="123"
+     name="测试"
+    >
+         <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
+          <div slot="footer" >
+            <div>审核通过</div>
+            <div>关联关键词：5个</div>
+          </div>
+    </xm-template>
+
+</div>
+
+```
+:::
+
+
 
 ### 多选框组
 
@@ -78,7 +118,6 @@ export default {
     :state="item.state"
     :isEdit="item.isEdit"
     :disabled="item.disabled"
-    footer
     :stateColor="item.stateColor"
     >
          <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
@@ -197,7 +236,6 @@ export default {
     :state="item.state"
     :isEdit="item.isEdit"
     :disabled="item.disabled"
-    footer
     :stateColor="item.stateColor"
     >
          <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
@@ -319,7 +357,13 @@ export default {
 | value / v-mode	 | 绑定值 |  string number  boolean| — | - |
 | id	 | 模版id |  string number  | — | - |
 | name	 | 模版名称 |  string number  | — | - |
-| footer	 | 是否显示底部状态 |  Boolean  | — | false |
+
+### slot
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| default | 默认插槽	 | 	- | — | -|
+| footer | 底部插槽	 |  -|  - |-|
+
 
 ## Template 事件
 

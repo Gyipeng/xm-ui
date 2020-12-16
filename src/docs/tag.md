@@ -1,4 +1,4 @@
-<style>
+<style scope>
   .xm-tag{
     margin-right: 10px;
   }
@@ -15,7 +15,7 @@
   <div>
     <xm-tag> 默认标签</xm-tag>
      <xm-tag type="blue"> 默认标签</xm-tag>
-     <xm-tag type="plain"> 默认标签</xm-tag>
+     <xm-tag type="plain" round closable> 默认标签</xm-tag>
      <xm-tag closable> 默认标签</xm-tag>
   </div>
 

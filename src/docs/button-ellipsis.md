@@ -7,6 +7,9 @@
           <template #default="{item}" >
                <xm-button>{{item.name}}</xm-button>
            </template>
+            <template #number="{number}" >
+           <xm-button >{{number}} </xm-button>
+             </template>
       </xm-button-ellipsis>
   </div>
     <div >

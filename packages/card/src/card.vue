@@ -16,14 +16,14 @@
      </div>
    </div>
 
-   <el-card v-else :class="cls" :body-style="getBodyStyle">
+   <div v-else :class="cls" >
     <slot name="header"></slot>
     <slot v-if="$slots.default"></slot>
-    <div v-else class="xm-card__body">
+    <div v-else class="xm-card__body" >
       <div class="xm-card__header">
         <xm-media :src="src" v-bind="$attrs"></xm-media>
       </div>
-      <div class="xm-card__content">
+      <div class="xm-card__content" :style="bodyStyle">
         <div class="xm-card__title">
           {{ title }}
         </div>
@@ -31,15 +31,15 @@
           {{ desc }}
         </div>
         <div class="xm-card__footer">
-           <div class="xm-card--white" v-for="action in actions" :key="action">
+           <xm-tag class="xm-card__action" round  type="plain" v-for="action in actions" :key="action">
              {{action}}
-           </div>
+           </xm-tag>
         </div>
       </div>
     </div>
     <slot name="footer"></slot>
 
-  </el-card>
+  </div>
 
 </template>
 
@@ -79,7 +79,8 @@ export default {
       type: String,
       validator: (value) => {
         return ['medium', 'small', 'mini'].indexOf(value) !== -1
-      }
+      },
+      default: 'medium'
     }
   },
   computed: {

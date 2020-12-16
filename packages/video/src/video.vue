@@ -2,7 +2,7 @@
 <template>
  <div :class="cls" :style="style">
    <img  v-if="onePlay" class="xm-video__play" :src="play" alt="" @click="handleToPlay">
-   <i :class="icon"  class="xm-video__type" ></i>
+   <!--<i :class="icon"  class="xm-video__type" ></i>-->
    <video
      ref="video"
      v-show="show"
@@ -17,6 +17,7 @@
      抱歉，您的浏览器不支持内嵌视频，不过不用担心，你可以 <a :href="src">下载</a>
      并用你喜欢的播放器观看!
    </video>
+   <div class="xm-video__time" v-if="poster">{{this.duration}}</div>
  </div>
 </template>
 
@@ -46,7 +47,7 @@ export default {
     icon: {
       type: String,
       default: ''
-    },
+    }
 
   },
   methods: {

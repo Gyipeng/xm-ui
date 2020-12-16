@@ -23,7 +23,7 @@
     <div class="xm-template__des">
       <xm-button-ellipsis :data="buttons"> </xm-button-ellipsis>
     </div>
-    <div class="xm-template__footer mt20" v-if="footer">
+    <div class="xm-template__footer mt20" v-if="state">
       <div class="xm-template__state">
         <span
           class="xm-template__circle mr6"
@@ -36,6 +36,8 @@
         <i class="icon-more"></i>
       </xm-button-more>
     </div>
+       <slot name="footer"  v-else ></slot>
+
   </div>
 </template>
 
