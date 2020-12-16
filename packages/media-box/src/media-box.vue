@@ -3,17 +3,19 @@
   <div class="xm-media-box">
     <div class="xm-media-box__top">
       <div class="xm-media-box__title">{{title}}</div>
-      <div class="xm-media-box__action">
-        <xm-button-more    v-bind="$attrs" >
-          <i class="icon-more"></i>
-        </xm-button-more>
-      </div>
+      <!--<div class="xm-media-box__action">-->
+        <!--<xm-button-more    v-bind="$attrs" >-->
+          <!--<i class="icon-more"></i>-->
+        <!--</xm-button-more>-->
+      <!--</div>-->
     </div>
     <div class="xm-media-box__content">
     <slot></slot>
     </div>
     <div class="xm-media-box__bottom">
-
+      <slot name="footer">
+        <xm-action  v-bind="$attrs" ></xm-action>
+      </slot>
     </div>
   </div>
 </template>

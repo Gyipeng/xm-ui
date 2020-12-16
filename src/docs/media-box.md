@@ -4,14 +4,18 @@
 ### 基础用法
 <div class="demo-block">
   <div >
-     <xm-media-box title="测试图片"  :menus="menus" @edit="edit" v-width="236">
-          <xm-media src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3">
+     <xm-media-box title="测试图片"  :actions="actions" @edit="edit" v-width="236" class="mb20">
+          <xm-media v-height="167" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3">
           </xm-media>
      </xm-media-box>
-        <xm-media-box title="测试图片"  :menus="menus" @edit="edit" v-width="236">
-                <xm-media src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4" poster="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg">
-                </xm-media>
-            </xm-media-box>
+     <xm-media-box title="测试图片"  :actions="actions" @edit="edit" v-width="236" class="mb20">
+       <xm-media v-height="167" src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4" poster="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg">
+       </xm-media>
+      </xm-media-box>
+       <xm-media-box title="测试图片"  :actions="actions" @edit="edit" v-width="236">
+             <xm-media v-height="260" src="https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg">
+             </xm-media>
+      </xm-media-box>
   </div>
 </div>
 
@@ -19,30 +23,23 @@
 export default {
   data() {
     return {
-        menus: [
-               {
-                 name: '编辑',
-                 action:(item)=>{
-                  console.log(item)
-                 },
-                 icon: 'icon-edit',
-                 key:'edit'
-               },
-               {
-                 name: '删除',
-                 action:()=>{
-                   console.log(2)
-                 },
-                 icon: 'icon-delete',
-                 key:"delete"
-               },
-             ],
+       actions:[
+                {
+                  icon: 'icon-delete',
+                  text: '删除',
+                  key: 'delete'
+                }, {
+                  icon: 'icon-edit',
+                  text: '编辑',
+                  key: 'edit'
+                }
+             ]
 
      }
   },
   methods: {
-      edit(){
-          console.log(2)
+      edit(item){
+          console.log(item)
       }
 
   },
@@ -58,14 +55,14 @@ export default {
 
 <div class="demo-block">
   <div >
-     <xm-media-box title="测试图片"  :menus="menus" @edit="edit" v-width="236">
-          <xm-media src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3">
+     <xm-media-box title="测试图片"  :actions="actions" @edit="edit" v-width="236" class="mb20">
+          <xm-media v-height="167" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3">
           </xm-media>
+     </xm-media-box>
+     <xm-media-box title="测试图片"  :actions="actions" @edit="edit" v-width="236">
+       <xm-media v-height="167" src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4" poster="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg">
+       </xm-media>
       </xm-media-box>
-        <xm-media-box title="测试图片"  :menus="menus" @edit="edit" v-width="236">
-                <xm-media src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4" poster="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg">
-                </xm-media>
-            </xm-media-box>
   </div>
 </div>
 
@@ -73,36 +70,30 @@ export default {
 export default {
   data() {
     return {
-        menus: [
-               {
-                 name: '编辑',
-                 action:(item)=>{
-                  console.log(item)
-                 },
-                 icon: 'icon-edit',
-                 key:'edit'
-               },
-               {
-                 name: '删除',
-                 action:()=>{
-                   console.log(2)
-                 },
-                 icon: 'icon-delete',
-                 key:"delete"
-               },
-             ],
+       actions:[
+                {
+                  icon: 'icon-delete',
+                  text: '删除',
+                  key: 'delete'
+                }, {
+                  icon: 'icon-edit',
+                  text: '编辑',
+                  key: 'edit'
+                }
+             ]
 
      }
   },
   methods: {
-      edit(){
-          console.log(2)
+      edit(item){
+          console.log(item)
       }
 
   },
 }
 
 </script>
+
 
 
 
@@ -115,8 +106,12 @@ export default {
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | title | 卡片主题名称| String | — | - |
-| actions  | 按钮方法  | Array   | — | - |
-| key  与action 选其一| 按钮key触发emit  | String   | — | - |
+| actions  | 按钮配置列表  | Array   | — | - |
 | src | 按钮图标链接| String   | — | - |
-| menus | 按钮列表 | String     | —  | - |
-| menus的其余 | buttonMore组件有详细说明 | String     | —  | - |
+
+### Actions配置信息
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| icon    | 菜单按钮图标   | String    | — | —    |
+| text     | 菜单按钮描述   | string  |  -          |    —     |
+| key     | 方法触发key  | string    |   - |    -  |

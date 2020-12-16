@@ -81,6 +81,11 @@ export const routerConfig = {
           'desc': 'Phone 手机',
           'name': 'phone',
           'path': '/phone'
+        },
+        {
+          'desc': 'Action 操作',
+          'name': 'action',
+          'path': '/action'
         }
       ]
     },
