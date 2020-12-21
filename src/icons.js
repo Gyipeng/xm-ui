@@ -1,6 +1,6 @@
 export const icons = [
-  "icon-Cha",
-  "icon-gou",
+  'icon-Cha',
+  'icon-gou',
   'icon-more',
   'icon-base-management',
   'icon-Business-manegement',
@@ -44,5 +44,5 @@ export const icons = [
   'icon-sound',
   'icon-playB',
   'icon-stopB',
-  'icon-yes-o',
+  'icon-yes-o'
 ]
