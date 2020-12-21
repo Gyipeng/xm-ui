@@ -51,9 +51,6 @@ export default {
   },
   components: {
     bubble, systemMessage, expandComponent
-  },
-  created () {
-    console.log(this)
   }
 }
 </script>

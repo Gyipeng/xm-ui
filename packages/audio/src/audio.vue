@@ -4,7 +4,7 @@
   <div :class="cls" >
       <div class="xm-audio__defaultCover"  :style="style"   ></div>
       <i :class="icon" class="xm-audio__type"></i>
-      <img class="xm-audio__play" :src="palyOrStop" alt="" @click="handleToPlay">
+      <img class="xm-audio__play" :src="palyOrStop" alt="" @click.stop="handleToPlay">
       <audio ref="audio"
              class="audio"
              @timeupdate="onTimeupdate"

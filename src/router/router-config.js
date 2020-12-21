@@ -58,14 +58,19 @@ export const routerConfig = {
           'path': '/buttonMore'
         },
         {
-          'desc': 'CheckedCard 多选卡片',
+          'desc': 'CheckedCard 单选卡片',
           'name': 'checked-card',
           'path': '/checkedCard'
         },
+        // {
+        //   'desc': 'RadioCard 多选卡片',
+        //   'name': 'radio-card',
+        //   'path': '/radioCard'
+        // },
         {
-          'desc': 'RadioCard 单选选卡片',
-          'name': 'radio-card',
-          'path': '/radioCard'
+          'desc': 'Template 多选模版',
+          'name': 'template',
+          'path': '/template'
         },
         {
           'desc': 'Tabs 标签页',

@@ -149,7 +149,7 @@ export default {
 
 ::: demo
 ```html
-<style lang="less">
+<style  lang="less">
 .xm-tabs-custom{
   >div {
     display: block;

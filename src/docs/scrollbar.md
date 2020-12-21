@@ -1,4 +1,4 @@
-<style>
+<style scope>
   .el-scrollbar__wrap{
     overflow-x: hidden;
   }

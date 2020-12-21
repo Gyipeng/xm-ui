@@ -16,6 +16,7 @@
     <xm-tag> 默认标签</xm-tag>
      <xm-tag type="blue"> 默认标签</xm-tag>
      <xm-tag type="plain" round closable> 默认标签</xm-tag>
+     <xm-tag type="plain" size="mini" round closable> 默认标签</xm-tag>
      <xm-tag closable> 默认标签</xm-tag>
   </div>
 
@@ -26,10 +27,11 @@
 ```html
 
 <div>
-      <xm-tag> 默认标签</xm-tag>
-      <xm-tag type="blue"> 默认标签</xm-tag>
-      <xm-tag type="plain"> 默认标签</xm-tag>
-      <xm-tag closable> 默认标签</xm-tag>
+          <xm-tag> 默认标签</xm-tag>
+          <xm-tag type="blue"> 默认标签</xm-tag>
+          <xm-tag type="plain" round closable> 默认标签</xm-tag>
+          <xm-tag type="plain" size="mini" round closable> 默认标签</xm-tag>
+          <xm-tag closable> 默认标签</xm-tag>
 </div>
 
 
@@ -133,6 +135,7 @@ export default {
 | name | 用于触发关闭事件时的回调 | Boolean | — | false |
 | color | 关闭按钮颜色类型 | String |  `primary`, `success`, `danger`, `warning`, `info` | primary |
 | type | 标签风格类型 | String |  `primary`, `success`, `danger`, `warning`, `info` | "" |
+| size | 按钮大小 | String |  'medium', 'small', 'mini' | "" |
 | closable | 是否可关闭 | Boolean | — | false |
 
 ## Tag 事件

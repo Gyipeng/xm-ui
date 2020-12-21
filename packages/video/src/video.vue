@@ -1,7 +1,7 @@
 
 <template>
  <div :class="cls" :style="style">
-   <img  v-if="onePlay" class="xm-video__play" :src="play" alt="" @click="handleToPlay">
+   <img  v-if="onePlay" class="xm-video__play" :src="play" alt="" @click.stop="handleToPlay">
    <!--<i :class="icon"  class="xm-video__type" ></i>-->
    <video
      ref="video"

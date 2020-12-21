@@ -2,7 +2,7 @@
   <div :class="cls">
     <div v-if="disabled || isChecked" :class="getModelType"></div>
     <div class="xm-template__header">
-      <div class="xm-template__name mt3">
+      <div class="xm-template__name">
         <span class="xm-label mr5">模板名称:</span>{{ name }}
       </div>
       <el-checkbox
@@ -21,7 +21,7 @@
       <slot> </slot>
     </div>
     <div class="xm-template__des">
-      <xm-button-ellipsis :data="buttons"> </xm-button-ellipsis>
+      <xm-button-ellipsis size="mini" :data="buttons"> </xm-button-ellipsis>
     </div>
     <div class="xm-template__footer mt20" v-if="state">
       <div class="xm-template__state">

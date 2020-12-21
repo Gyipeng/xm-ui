@@ -63,11 +63,16 @@
     border: 1px solid $color-plain-border;
   }
   @include when(round){
-    padding: 8px 12px ;
+    padding: 8px 14px ;
     border-radius: 16px;
   }
-
-
+  @include m(mini){
+    @include when(round){
+      font-size: 12px;
+      padding: 7px 12px;
+      border-radius: 14px;
+    }
+  }
   @include b(icon) {
     color: #ffffff;
     position: absolute;

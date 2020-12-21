@@ -29,7 +29,14 @@ export default {
       default: 'primary'
     },
     round: [Boolean],
-    border: [Boolean]
+    border: [Boolean],
+    size: {
+      type: String,
+      validator: (value) => {
+        return ['medium', 'small', 'mini'].indexOf(value) !== -1
+      },
+      default: 'small'
+    }
 
   },
   methods: {
@@ -44,8 +51,9 @@ export default {
     cls () {
       const className = classnames('xm-tag', 'xm-tag--default', {
         [`xm-tag--${this.type}`]: this.type,
+        [`xm-tag--${this.size}`]: !!this.size,
         [`is-round`]: this.round,
-        [`is-border`]:this.closable
+        [`is-border`]: this.closable
       })
 
       return className

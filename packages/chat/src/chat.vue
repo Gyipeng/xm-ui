@@ -3,7 +3,7 @@
   <div class="xm-chat">
     <div class="xm-chat__title">{{title}}</div>
     <div class="xm-chat__container">
-      <message v-for="message in messages"   v-bind="message" :key="messages.id"  ></message>
+      <message v-for="message in messages"   v-bind="message" :key="messages.id"    @click.native="handleClick(message)"  ></message>
     </div>
   </div>
 
@@ -24,6 +24,11 @@ export default {
       default: () => []
     },
     title: String
+  },
+  methods: {
+    handleClick (item) {
+      this.$emit('click', item)
+    }
   },
   components: {
     message

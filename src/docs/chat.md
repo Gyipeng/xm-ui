@@ -3,7 +3,7 @@
 ### 基础用法
 <div class="demo-block">
 
-  <xm-chat  :messages="messages" title="139****7777(用户1备注)" ></xm-chat>
+  <xm-chat  :messages="messages" title="139****7777(用户1备注)" @click="handleClick" ></xm-chat>
 
 </div>
 <script>
@@ -70,6 +70,11 @@ export default {
                  ]
      }
   },
+  methods: {
+   handleClick (item) {
+     console.log(item)
+   }
+   }
 }
 
 </script>
@@ -189,3 +194,7 @@ export default {
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | avatar	 | 用户头像链接	 | String	 | — | - |
 
+## Chat 事件
+| 事件名称      | 说明          | 返回值  |
+|---------- |-------------- |---------- |
+| click | 点击触发 | message |
