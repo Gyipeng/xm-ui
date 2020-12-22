@@ -23,6 +23,7 @@ import Fold from './flod/index.js'
 import Chat from './chat/index.js'
 import Permission from './permission/index.js'
 import Action from './action/index.js'
+import Editor from './editor/index.js'
 
 import style from '../utils/style'
 import filters from '../utils/filter'
@@ -50,7 +51,8 @@ const components = [
   Fold,
   Chat,
   Permission,
-  Action
+  Action,
+  Editor
 ]
 
 const directives = {
@@ -106,6 +108,7 @@ export default {
   Fold,
   Chat,
   Permission,
-  Action
+  Action,
+  Editor
 
 }

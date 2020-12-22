@@ -184,6 +184,11 @@ export const routerConfig = {
           'path': '/permission'
         },
         {
+          'desc': 'Editor 富文本编辑器',
+          'name': 'editor',
+          'path': '/editor'
+        },
+        {
           'desc': 'Collapse 收起',
           'name': ' collapse',
           'path': '/collapse'
