@@ -1,0 +1,33 @@
+@import "./mixins/mixins.scss";
+
+@include b(action){
+  padding: 11px 0;
+  display: flex;
+  justify-content: space-between;
+  @include m(default){
+    //height: 43px;
+    background: #FFFFFF;
+  }
+  @include e(item){
+    position: relative;
+    flex: 1;
+    text-align: center;
+    color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @include e(text){
+    padding-left: 8px;
+  }
+  @include e(icon){
+
+  }
+  @include e(divider){
+    margin: auto 0 ;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
