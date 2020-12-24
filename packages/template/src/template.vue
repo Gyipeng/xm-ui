@@ -1,6 +1,6 @@
 <template>
   <div :class="cls">
-    <div v-if="disabled || isChecked" :class="getModelType"></div>
+    <div v-if="isEdit&&(disabled || isChecked)" :class="getModelType"></div>
     <div class="xm-template__header">
       <div class="xm-template__name">
         <span class="xm-label mr5">模板名称:</span>{{ name }}

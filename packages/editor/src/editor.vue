@@ -119,12 +119,13 @@
            @blur="blurEditor"
            @keyup="keyup"
            @keyup.enter="enter"
+           @keyup.delete="del"
            @input="change"
            @paste="paste"
            @focus="focus"
            @mouseup="mouseup"
            contenteditable="true">
-        <p><br></p>
+        <p><span><br></span></p>
       </div>
     </div>
 
@@ -139,7 +140,7 @@ export default {
   data () {
     return {
       range: null,
-      content: '<p><br></p>',
+      content: '<p><span><br></span></p>',
       link: {
         text: '链接',
         url: '',
@@ -166,15 +167,37 @@ export default {
     mouseup () {
       this.range = window.getSelection().getRangeAt(0)
     },
-    keyup () {
+    keyup (e) {
       this.range = window.getSelection().getRangeAt(0)
+      if (e.keyCode === 186) {
+        this.checkedNumber(e)
+      }
+    },
+    // 检查手机号码事件
+    checkedNumber (e) {
+      document.execCommand('insertHTML', false, '<span>测试</span>')
+      // let node = this.range.commonAncestorContainer
+      // node = node.parentNode
+      // node.innerHTML = node.innerText
+      // console.log(node, 123)
+    },
+    del (e) {
+      console.log(e)
+      let node = this.range.commonAncestorContainer
+      console.log(node,this.range)
+      if (!node.data.includes(';')) {
+        this.range.commonAncestorContainer = ''
+      }
+      console.log(node)
     },
     // input事件
     change () {
       let html = this.$refs.editor.innerHTML
+
       if (html == '') {
-        this.$refs.editor.innerHTML = '<p><br></p>'
+        this.$refs.editor.innerHTML = '<p><span><br></span></p>'
       }
+
       this.content = html
       this.range = window.getSelection().getRangeAt(0)
     },
@@ -182,12 +205,14 @@ export default {
     enter (e) {
       document.execCommand('formatBlock', false, 'P')
       let node = this.range.commonAncestorContainer
+
       if (node.className == 'editor') {
         return false
       }
       while (node.tagName != 'P') {
         node = node.parentNode
       }
+
       // 清除stye样式
       node.removeAttribute('style')
       node.removeAttribute('class')
@@ -309,7 +334,7 @@ export default {
           this.$message.error('引用不支持插入图片')
           return false
         }
-        let src = 'http://video.yingtu.co/8/image/288559ae-3365-4130-b9dc-b7a5ef187dea.jpg'
+        let src = 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg'
         let newNode = document.createElement('img')
         newNode.setAttribute('src', src)
         this.range.deleteContents()
