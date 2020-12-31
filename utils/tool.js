@@ -147,3 +147,16 @@ export function matchType (fileName) {
   result = 'other'
   return result
 }
+
+/**
+ * 文件流转base64
+ * @param blob
+ * @param callback
+ */
+export function blobToDataURI (blob, callback) {
+  const reader = new FileReader()
+  reader.readAsDataURL(blob)
+  reader.onload = function (e) {
+    callback(e.target.result)
+  }
+}

@@ -1,0 +1,12 @@
+@import "./mixins/mixins.scss";
+@include b(upload){
+  display: flex;
+  align-items: center;
+  @include e(button){
+    margin-right: 16px;
+
+  }
+  @include m(bottom){
+   align-items: flex-end;
+  }
+}

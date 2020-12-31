@@ -96,16 +96,16 @@ export default {
   computed: {
     cls () {
       const cls = classnames('xm-template', {
-        'xm-template--disabled': this.disabled,
-        'xm-template--border': this.isChecked
+        'xm-template--disabled': this.isEdit && this.disabled,
+        'xm-template--border': this.isEdit && this.isChecked
       })
 
       return cls
     },
     getModelType () {
       const cls = classnames('xm-mask', {
-        'xm-mask--disabled': this.disabled,
-        [`xm-mask--${this.modelType}`]: this.isChecked
+        'xm-mask--disabled': this.isEdit && this.disabled,
+        [`xm-mask--${this.modelType}`]: this.isEdit && this.isChecked
       })
       return cls
     },

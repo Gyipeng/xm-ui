@@ -179,6 +179,11 @@ export const routerConfig = {
           'path': '/table'
         },
         {
+          'desc': 'Upload 文件上传',
+          'name': 'upload',
+          'path': '/upload'
+        },
+        {
           'desc': 'Permission 权限',
           'name': 'permission',
           'path': '/permission'
@@ -194,16 +199,10 @@ export const routerConfig = {
           'path': '/collapse'
         },
         {
-          'desc': 'Upload 上传',
-          'name': ' upload',
-          'path': '/upload'
-        },
-        {
           'desc': 'Cropper 裁剪',
           'name': ' cropper',
           'path': '/cropper'
-        },
-
+        }
 
       ]
     }
