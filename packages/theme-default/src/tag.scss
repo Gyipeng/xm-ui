@@ -32,7 +32,7 @@
     border: 1px solid $color-grey-light;
   }
   @include m(success){
-    background:$color-success-light;
+    background:$color-success;
     color: $color-grey-light;
 
   }
@@ -50,7 +50,7 @@
     color: $color-grey-light;
   }
   @include m(primary){
-    background:$color-primary-light;
+    background:$color-primary;
     color: $color-grey-light;
   }
   @include m(blue){

@@ -1,5 +1,5 @@
 
-<style scope>
+<style scoped>
   .test {
      border:1px solid  #D4D7D9
   }

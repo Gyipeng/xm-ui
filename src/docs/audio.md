@@ -2,7 +2,7 @@
 ----
 ### 基础用法
 
-<style scope>
+<style scoped>
   .xm-audio-demo{
     width:224px;
     height:144px;

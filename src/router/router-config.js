@@ -53,6 +53,11 @@ export const routerConfig = {
           'path': '/tag'
         },
         {
+          'desc': 'State 状态',
+          'name': 'state',
+          'path': '/state'
+        },
+        {
           'desc': 'ButtonMore 更多操作',
           'name': 'button-more',
           'path': '/buttonMore'

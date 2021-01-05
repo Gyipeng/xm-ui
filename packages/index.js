@@ -25,6 +25,7 @@ import Permission from './permission/index.js'
 import Action from './action/index.js'
 import Editor from './editor/index.js'
 import Upload from './upload/index.js'
+import State from './state/index.js'
 
 import style from '../utils/style'
 import filters from '../utils/filter'
@@ -54,7 +55,8 @@ const components = [
   Permission,
   Action,
   Editor,
-  Upload
+  Upload,
+  State
 ]
 
 const directives = {
@@ -112,6 +114,7 @@ export default {
   Permission,
   Action,
   Editor,
-  Upload
+  Upload,
+  State
 
 }

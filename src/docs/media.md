@@ -1,4 +1,4 @@
-<style scope>
+<style scoped>
   .xm-media-demo{
     width:224px;
     height:144px;

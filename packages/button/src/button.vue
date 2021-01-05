@@ -6,7 +6,7 @@
     :class="[
     'xm-button--'+type,
     {'is-plain': plain, 'is-disabled': disabled, 'is-round': round},
-    'xm-button--size-'+size
+    'xm-button--'+size
     ]"
   >
     <i v-if="icon !== ''" :class="icon"></i>

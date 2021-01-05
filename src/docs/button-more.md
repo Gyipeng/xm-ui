@@ -1,4 +1,4 @@
-<style scope>
+<style scoped>
   .buttonmore{
     margin:10px
   }

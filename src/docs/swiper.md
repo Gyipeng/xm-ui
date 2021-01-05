@@ -2,7 +2,7 @@
 ----
 ### 基础用法
 
-<style scope>
+<style scoped>
   .card{
     margin:0 auto;
     width:224px;

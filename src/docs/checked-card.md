@@ -1,4 +1,4 @@
-<style scope>
+<style scoped>
  .el-col-8 {
  height:420px
  }

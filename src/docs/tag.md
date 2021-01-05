@@ -1,4 +1,4 @@
-<style scope>
+<style scoped>
   .xm-tag{
     margin-right: 10px;
   }

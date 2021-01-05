@@ -1,0 +1,83 @@
+@import "./mixins/mixins.scss";
+@include b(state){
+
+  @include m(mini){
+    font-size: 12px;
+    padding: 0 5px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  @include m(small){
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 0;
+    width: 76px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 4px;
+    @include m(success){
+      background: $color-success;
+    }
+    @include m(primary){
+      background: $color-primary;
+    }
+    @include m(warning){
+      background: $color-warning;
+    }
+    @include m(offline){
+      background: $color-offline;
+    }
+    @include m(danger){
+      background: $color-danger;
+    }
+  }
+  @include e(radius){
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  @include e(title){
+    display: inline-block;
+    padding: 1.5px 0;
+    font-size: 12px;
+  }
+  @include m(success){
+    background: $color-success-light;
+    @include e(radius){
+      background: $color-success-dark;
+    }
+    @include e(title){
+      color: $color-success;
+    }
+  }
+
+  @include m(primary){
+    background: $color-primary-light;
+    @include e(radius){
+      background: $color-primary-dark;
+    }
+    @include e(title){
+      color: $color-primary;
+    }
+  }
+  @include m(warning){
+    background: $color-warning-light;
+    @include e(radius){
+      background: $color-warning-dark;
+    }
+    @include e(title){
+      color: $color-warning;
+    }
+  }
+  @include m(offline){
+    background: $color-offline-light;
+    @include e(radius){
+      background: $color-offline-dark;
+    }
+    @include e(title){
+      color: $color-offline;
+    }
+  }
+}
