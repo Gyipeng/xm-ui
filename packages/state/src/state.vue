@@ -4,7 +4,7 @@
    </div>
    <div v-else :class="cls">
      <span class="xm-state__radius"></span>
-     <span class="xm-state__title"> <slot></slot></span>
+     <span class="xm-state__title"><slot></slot></span>
    </div>
 </template>
 

@@ -1,7 +1,7 @@
 
 <template>
    <div class="xm-swiper swiper-no-swiping" @click="swiperClick($event)">
-     <div class="xm-swiper__totalBox">共<span class="xm-swiper__num">{{data.length}}</span>张</div>
+     <!--<div class="xm-swiper__totalBox">共<span class="xm-swiper__num">{{data.length}}</span>张</div>-->
      <swiper :options="swiperOption" ref="swiper">
        <swiper-slide  v-if="cardLength===1&&centeredSlides">
 

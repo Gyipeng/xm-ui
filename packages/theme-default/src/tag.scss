@@ -15,6 +15,9 @@
   position: relative;
   cursor: pointer;
   background-color: #f7f7f7;
+  @include e(desc) {
+    font-size: 12px;
+  }
   &:hover {
     @include b(icon) {
       opacity: 1;
@@ -22,9 +25,6 @@
     @include when(border){
        border: 1px solid $tag-border-color;
     }
-  }
-  @include e(desc) {
-    font-size: 12px;
   }
   @include m(default) {
     background: #E6EEF5;

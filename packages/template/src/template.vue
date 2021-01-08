@@ -17,7 +17,7 @@
       <!--<span class="xm-label mr5">模板ID:</span>{{ id }}-->
     <!--</div>-->
     <div></div>
-    <div class="xm-template__content">
+    <div class="xm-template__content" :style="bodyStyle">
       <slot> </slot>
     </div>
     <div class="xm-template__des">
@@ -91,6 +91,9 @@ export default {
     footer: {
       type: Boolean,
       default: false
+    },
+    bodyStyle: {
+      type: Boolean
     }
   },
   computed: {

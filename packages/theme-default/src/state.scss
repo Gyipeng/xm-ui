@@ -2,7 +2,7 @@
 @include b(state){
 
   @include m(mini){
-    font-size: 12px;
+    font-size: 0;
     padding: 0 5px;
     border-radius: 4px;
     display: inline-block;
@@ -32,9 +32,10 @@
     }
   }
   @include e(radius){
-    vertical-align: middle;
+    vertical-align: super;
     width: 6px;
     height: 6px;
+    margin-right: 4px;
     display: inline-block;
     border-radius: 50%;
   }

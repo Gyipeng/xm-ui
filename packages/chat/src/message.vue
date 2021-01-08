@@ -2,7 +2,7 @@
 <template>
   <div :class="cls" >
     <div class="Message-content" >
-      <el-avatar class="Avatar" shape="square" v-if="user&&user.avatar"   :src="user.avatar" ></el-avatar>
+      <el-avatar class="Avatar" shape="circle"  size="small" v-if="user&&user.avatar"   :src="user.avatar" ></el-avatar>
       <expandComponent v-if="renderEl" :render="renderEl" v-bind="content"   ></expandComponent>
       <bubble v-else-if="type==='text'" :content="content.text"></bubble>
       <systemMessage v-else-if="type==='system'" v-bind="content" ></systemMessage>

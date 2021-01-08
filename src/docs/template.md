@@ -350,6 +350,7 @@ export default {
 | modelType	 | 选中遮罩层类型 	 | String |primary| primary|
 | buttons | 按钮省略组件列表	 | Array | - |-|
 | stateColor | 状态圆圈颜色 | String | #123456 | - |
+| bodyStyle | 修改templateContent样式 插槽样式 | Obejct | style | - |
 | state	 | 状态 | String | — | - |
 | menus	 | 更多操作组件列表 | Array | — | - |
 | label	 | 选中状态的值 | string number  boolean| — | - |
