@@ -1,4 +1,7 @@
 export const icons = [
+  'icon-Thing_mane',
+  'icon-Add_24x24',
+  'icon-Add_14x14',
   'icon-Cha',
   'icon-gou',
   'icon-more',
