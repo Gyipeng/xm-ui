@@ -1,9 +1,9 @@
 
 <template>
   <transition name="xm-zoom-in-center">
-  <div  :class="cls" >
-       <span class="xm-tag__desc" @click="click"><slot></slot></span>
-       <i :class="closeCls" v-if="closable" @click="close"></i>
+  <div  :class="cls" @click="click">
+       <span class="xm-tag__desc" ><slot></slot></span>
+       <i :class="closeCls" v-if="closable" @click.stop="close"></i>
       <!--<img src="../../../assets/im" alt="">-->
   </div>
   </transition>
