@@ -12,14 +12,14 @@
        <swiper-slide v-if="this.$slots.button">
          <slot name="button"></slot>
        </swiper-slide>
-       <div class="swiper-pagination" slot="pagination" v-if='cardLength>cardShowNumber||showPage'></div>
-       <div class="swiper-button-prev xm-swiper__button hide" slot="button-prev" v-if='cardLength>cardShowNumber||showPage'>
-         <i class="el-icon-arrow-left"></i>
-       </div>
-       <div class="swiper-button-next xm-swiper__button hide" slot="button-next" v-if='cardLength>cardShowNumber||showPage'>
-         <i class="el-icon-arrow-right"></i>
-       </div>
      </swiper>
+     <div class="swiper-pagination" slot="pagination" v-if='cardLength>cardShowNumber||showPage'></div>
+     <div class="swiper-button-prev xm-swiper__button hide" slot="button-prev" v-if='cardLength>cardShowNumber||showPage'>
+       <i class="el-icon-arrow-left"></i>
+     </div>
+     <div class="swiper-button-next xm-swiper__button hide" slot="button-next" v-if='cardLength>cardShowNumber||showPage'>
+       <i class="el-icon-arrow-right"></i>
+     </div>
    </div>
 </template>
 

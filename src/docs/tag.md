@@ -15,7 +15,7 @@
   <div>
     <xm-tag> 默认标签</xm-tag>
      <xm-tag type="blue"> 默认标签</xm-tag>
-     <xm-tag type="plain" round closable> 默认标签</xm-tag>
+     <xm-tag type="plain" round closable > 默认标签</xm-tag>
      <xm-tag type="plain" size="mini" round closable> 默认标签</xm-tag>
      <xm-tag closable> 默认标签</xm-tag>
   </div>
@@ -49,6 +49,7 @@
   v-for="tag in dynamicTags"
   closable
   :type="tag.color"
+  @click="handleClick"
   @close="handleClose(tag)" :color="tag.color">
   {{tag.name}}
 </xm-tag>
@@ -78,6 +79,9 @@ export default {
     methods: {
       handleClose(tag) {
         this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1);
+      },
+      handleClick(){
+       console.log(1)
       }
     }
   }

@@ -1,6 +1,7 @@
 @import "./mixins/mixins.scss";
 @include b(swiper){
    margin:0 auto;
+   position: relative;
    @include e(totalBox){
      font-size: 12px;
      color:$tabs-color;
