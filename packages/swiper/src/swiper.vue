@@ -4,7 +4,6 @@
      <!--<div class="xm-swiper__totalBox">共<span class="xm-swiper__num">{{data.length}}</span>张</div>-->
      <swiper :options="swiperOption" ref="swiper">
        <swiper-slide  v-if="cardLength===1&&centeredSlides">
-
        </swiper-slide>
        <swiper-slide  v-for="(item, boxIndex) in data" :key="boxIndex">
          <slot   :item="getItme(item,boxIndex)"></slot>
@@ -13,11 +12,11 @@
          <slot name="button"></slot>
        </swiper-slide>
      </swiper>
-     <div class="swiper-pagination" slot="pagination" v-if='cardLength>cardShowNumber||showPage'></div>
-     <div class="swiper-button-prev xm-swiper__button hide" slot="button-prev" v-if='cardLength>cardShowNumber||showPage'>
+     <div class="swiper-pagination" slot="pagination" :class="{'xm-show':cardLength>=cardShowNumber}"></div>
+     <div class="swiper-button-prev xm-swiper__button " slot="button-prev" :class="{'xm-show':cardLength>=cardShowNumber}">
        <i class="el-icon-arrow-left"></i>
      </div>
-     <div class="swiper-button-next xm-swiper__button hide" slot="button-next" v-if='cardLength>cardShowNumber||showPage'>
+     <div class="swiper-button-next xm-swiper__button " slot="button-next" :class="{'xm-show':cardLength>=cardShowNumber}">
        <i class="el-icon-arrow-right"></i>
      </div>
    </div>

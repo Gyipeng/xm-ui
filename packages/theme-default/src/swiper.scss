@@ -23,11 +23,26 @@
      line-height: 40px;
      font-size: 13px;
      color: $primary-color;
+     opacity: 0;
    }
    .swiper-pagination{
      margin: 16px auto;
      position: static;
+     opacity: 0;
    }
+  .swiper-pagination-bullet{
+    width:6px;
+    height:6px;
+    background: #D8E1E6;
+    border-radius:50%;
+    margin-right: 8px;
+  }
+  .swiper-pagination-bullet-active{
+    background:#787D80;
+  }
+  .xm-show{
+    opacity: 1!important;
+  }
 
 
 }
