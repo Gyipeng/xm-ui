@@ -2,14 +2,14 @@
 <template>
    <div class="xm-plain-card"  v-if="plain||size==='mini'">
 
-     <xm-media v-height="126"  :title="title" :src="src" v-bind="$attrs"></xm-media>
+     <xm-media v-height="126"  :title="title" :src="src" v-bind="$attrs" :fit="fit"></xm-media>
      <div class="xm-plain-card__container" :style="bodyStyle">
        <div class="xm-plain-card__des">  {{ desc }}</div>
        <!--<div class="xm-plain-card__content" ><slot></slot></div>-->
      </div>
    </div>
    <div :class="cls" v-else-if="size==='small'">
-     <xm-media v-height="144"  :src="src" v-bind="$attrs"></xm-media>
+     <xm-media v-height="144"  :src="src" v-bind="$attrs" :fit="fit"></xm-media>
      <div class="xm-card--small-container" :style="bodyStyle">
         <div class="xm-card--small-title">{{title}}</div>
         <div class="xm-card--small-des">{{ desc }}</div>
@@ -21,7 +21,7 @@
     <slot v-if="$slots.default"></slot>
     <div v-else class="xm-card__body" >
       <div class="xm-card__header">
-        <xm-media :src="src" v-bind="$attrs"></xm-media>
+        <xm-media :src="src" v-bind="$attrs" :fit="fit"></xm-media>
       </div>
       <div class="xm-card__content" :style="bodyStyle">
         <div class="xm-card__title">
@@ -81,6 +81,10 @@ export default {
         return ['medium', 'small', 'mini'].indexOf(value) !== -1
       },
       default: 'medium'
+    },
+    fit: {
+      type: String,
+      default: 'contain'
     }
   },
   computed: {
