@@ -24,7 +24,7 @@
       <xm-checked-card label="复选框 B" >
                     <xm-card
                       v-width="244"
-                     src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                     src="https://cms.cnc.blzstatic.cn/cms/gallery/4G8KGRWWG7FS1557732437703.mp4"
                      title="测试"
                      desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
                      :actions="['测试','生物','卡','卡地方']"
@@ -35,7 +35,7 @@
    <xm-checked-card label="复选框 C" >
                       <xm-card
                         v-width="244"
-                       src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                       src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"
                        title="测试"
                        desc="尊敬的客户：感谢您参加流量大放送活动，恭喜您获得"
                        :actions="['测试','生物','卡','卡地方']"

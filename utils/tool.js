@@ -84,7 +84,7 @@ export function matchType (fileName) {
     return result
   }
   // 图片格式
-  const imglist = ['png', 'jpg', 'jpeg', 'bmp', 'gif']
+  const imglist = ['png', 'jpg', 'jpeg', 'bmp', 'gif', 'PNG', 'JPG', 'JPEG', 'BMP', 'GIF']
   // const imglist = PICFORMAT;
   // 进行图片匹配
   result = imglist.some(item => item == suffix)

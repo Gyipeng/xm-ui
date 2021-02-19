@@ -13,7 +13,7 @@
        </xm-media>
       </xm-media-box>
        <xm-media-box title="测试图片"  :actions="actions" @edit="edit" v-width="236">
-             <xm-media v-height="260" src="https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg">
+             <xm-media v-height="260" src="http://112.35.148.16:8098/group/M00/00/20/CicAEGAt4EWATNN_AB4l1rjEc1E817_thumb.JPG">
              </xm-media>
       </xm-media-box>
   </div>

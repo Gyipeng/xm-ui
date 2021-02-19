@@ -8,6 +8,16 @@
       <systemMessage v-else-if="type==='system'" v-bind="content" ></systemMessage>
       <component v-height="content.height" v-width="content.width" class="Bubble " v-else v-bind:is="type" v-bind="content" ></component>
     </div>
+    <!--<div class="Message-key" v-if="key">-->
+      <!--<el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">-->
+      <!--<div class="key">-->
+        <!--关键词:晚安-->
+      <!--</div>-->
+      <!--</el-tooltip>-->
+      <!--<el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">-->
+        <!--<i class="Message-icon el-icon-question"></i>-->
+      <!--</el-tooltip>-->
+    <!--</div>-->
     <div  class="Message-meta">
       {{time}}
     </div>
@@ -39,7 +49,11 @@ export default {
       type: String,
       default: 'left'
     },
-    renderEl: Function
+    renderEl: Function,
+    key: {
+      type: String,
+      default: ''
+    }
   },
   computed: {
     cls () {

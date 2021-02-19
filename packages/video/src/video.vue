@@ -1,7 +1,7 @@
 
 <template>
  <div :class="cls" :style="style">
-   <img  v-if="onePlay" class="xm-video__play" :src="play" alt="" @click.stop="handleToPlay">
+   <img  v-if="!playing&&poster" class="xm-video__play" :src="play" alt="" @click.stop="handleToPlay">
    <!--<i :class="icon"  class="xm-video__type" ></i>-->
    <video
      ref="video"
@@ -9,6 +9,7 @@
      controls
      @canplay="onCanplay"
      @play="onPlay"
+     @pause="onPaused"
      class="video"
      object-fit="contain"
      :src="src"
@@ -77,6 +78,9 @@ export default {
           item.pause()
         }
       })
+    },
+    onPaused () {
+      this.playing = false
     }
   },
   computed: {

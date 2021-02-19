@@ -55,9 +55,13 @@
         margin-left: 12px;
       }
     }
-    .Message-meta {
+    .Message-meta{
       text-align: right;
-      margin-right: 55px;
+      margin-right: 40px;
+    }
+    .Message-key{
+      text-align: right;
+      margin-right: 40px;
     }
     .Bubble {
       margin-left: 28%;
@@ -74,9 +78,25 @@
   margin-top: 4px;
   margin-bottom: 8px;
   text-align: left;
-  margin-left: 55px;
+  margin-left: 40px;
   color: $chat-time-color;
   font-size: $chat-time-font-size;
+}
+.Message-key {
+
+  margin-top: 8px;
+  margin-bottom: 4px;
+  margin-left: 40px;
+  .key{
+    display: inline-block;
+    padding: 3px 12px;
+    text-align: left;
+    color: #606366;
+    font-size: $chat-time-font-size;
+    background: #E1E3E6;
+    border-radius: 13px;
+  }
+
 }
 
 .Message-content {
