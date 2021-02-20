@@ -80,6 +80,10 @@ export default {
       })
     },
     onPaused () {
+
+    },
+    init () {
+      this.$refs.video.currentTime = 0
       this.playing = false
     }
   },
