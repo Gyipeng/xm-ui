@@ -44,7 +44,7 @@ export default {
                      },
                      user: { avatar: '//gw.alicdn.com/tfs/TB1DYHLwMHqK1RjSZFEXXcGMXXa-56-62.svg' },
                      position: 'right',
-                     time:"2020/04/24 17:52:12"
+                     time:"2020/04/24 17:52:12",
                    },
                    {
                      id :3,
@@ -54,7 +54,8 @@ export default {
                            params.attrs={title:'123',src: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',}
                            return h('xm-img',params)
                       },
-                     user: { avatar: '//gw.alicdn.com/tfs/TB1DYHLwMHqK1RjSZFEXXcGMXXa-56-62.svg' }
+                     user: { avatar: '//gw.alicdn.com/tfs/TB1DYHLwMHqK1RjSZFEXXcGMXXa-56-62.svg' },
+                     keyData:"7345734975349573457-616413-315491735713917359137591375195315491735713917359137591375195"
                    },
                    {
                      id :4,
@@ -130,7 +131,8 @@ export default {
                      },
                      user: { avatar: '//gw.alicdn.com/tfs/TB1DYHLwMHqK1RjSZFEXXcGMXXa-56-62.svg' },
                      position: 'right',
-                     time:"2020/04/24 17:52:12"
+                     time:"2020/04/24 17:52:12",
+
                    },
                    {
                      id :3,
@@ -140,7 +142,8 @@ export default {
                            params.attrs={title:'123',src: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',}
                            return h('xm-img',params)
                       },
-                     user: { avatar: '//gw.alicdn.com/tfs/TB1DYHLwMHqK1RjSZFEXXcGMXXa-56-62.svg' }
+                     user: { avatar: '//gw.alicdn.com/tfs/TB1DYHLwMHqK1RjSZFEXXcGMXXa-56-62.svg' },
+
                    },
                    {
                      id :4,

@@ -8,16 +8,16 @@
       <systemMessage v-else-if="type==='system'" v-bind="content" ></systemMessage>
       <component v-height="content.height" v-width="content.width" class="Bubble " v-else v-bind:is="type" v-bind="content" ></component>
     </div>
-    <!--<div class="Message-key" v-if="key">-->
-      <!--<el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="bottom-start">-->
-      <!--<div class="key" >-->
-        <!--关键词:晚安-->
-      <!--</div>-->
-      <!--</el-tooltip>-->
-      <!--<el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="right">-->
-        <!--<i class="Message-icon el-icon-question"></i>-->
-      <!--</el-tooltip>-->
-    <!--</div>-->
+    <div class="Message-key" v-if="keyData">
+      <el-tooltip class="item" effect="light" :content="keyData" placement="bottom-start" popper-class="xm-tooltip" :visible-arrow="false">
+      <div class="key Ellipsis" >
+        关键词:{{keyData}}
+      </div>
+      </el-tooltip>
+      <el-tooltip class="item" effect="light" content="终端不展示关键词" placement="right" popper-class="xm-tooltip" >
+        <img  class="icon" src="../../../assets/img/point.png" alt="">
+      </el-tooltip>
+    </div>
     <div  class="Message-meta">
       {{time}}
     </div>
@@ -50,13 +50,11 @@ export default {
       default: 'left'
     },
     renderEl: Function,
-    key: {
-      type: String,
-      default: ''
-    }
+    keyData: String
   },
   computed: {
     cls () {
+      console.log(this);
       const className = classnames('Message', {
         [`xm-${this.position}`]: true
       })

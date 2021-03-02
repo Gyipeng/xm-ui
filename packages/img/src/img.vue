@@ -19,7 +19,7 @@ export default {
     src: String
   },
   created () {
-    console.log(this)
+    // console.log(this)
   }
 }
 </script>
