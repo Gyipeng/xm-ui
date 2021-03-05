@@ -54,7 +54,6 @@ export default {
   },
   computed: {
     cls () {
-      console.log(this);
       const className = classnames('Message', {
         [`xm-${this.position}`]: true
       })

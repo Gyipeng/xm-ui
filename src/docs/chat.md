@@ -143,6 +143,8 @@ export default {
                            return h('xm-img',params)
                       },
                      user: { avatar: '//gw.alicdn.com/tfs/TB1DYHLwMHqK1RjSZFEXXcGMXXa-56-62.svg' },
+                     keyData:"7345734975349573457-616413-315491735713917359137591375195315491735713917359137591375195"
+
 
                    },
                    {
