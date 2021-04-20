@@ -2,7 +2,7 @@
 ----
 ### 基础用法
 <div class="demo-block">
-     <xm-upload :onSuccess="onSuccess">
+     <xm-upload :onSuccess="onSuccess" accept="image/gif, image/jpeg" :onClose="onClose">
           <xm-video v-if="src" :src="src"  v-width="224" v-height="144">
          </xm-video>
     </xm-upload>
@@ -19,8 +19,10 @@ export default {
    onSuccess(src,file){
    console.log(src)
       this.src=src
+   },
+   onClose(){
+   this.src=""
    }
-
   }
 
 }
@@ -31,7 +33,7 @@ export default {
 ```html
 
 <div class="demo-block">
-     <xm-upload :onSuccess="onSuccess">
+     <xm-upload :onSuccess="onSuccess" accept="image/gif, image/jpeg" :onClose="onClose">
           <xm-video v-if="src" :src="src"  v-width="224" v-height="144">
          </xm-video>
     </xm-upload>
@@ -46,16 +48,17 @@ export default {
   },
   methods:{
    onSuccess(src,file){
+   console.log(src)
       this.src=src
+   },
+   onClose(){
+   this.src=""
    }
-
   }
 
 }
 
 </script>
-
-
 
 ```
 :::

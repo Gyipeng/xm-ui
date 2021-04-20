@@ -9,4 +9,15 @@
   @include m(bottom){
    align-items: flex-end;
   }
+  @include e(progress){
+    margin-left: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  @include m(close){
+    color: #C0C6CC;
+    position: absolute;
+    right: 0;
+  }
 }

@@ -1,1 +1,1 @@
-@charset "UTF-8";.xm-upload{display:flex;align-items:center}.xm-upload .xm-upload__button{margin-right:16px}.xm-upload--bottom{align-items:flex-end}
+@charset "UTF-8";.xm-upload{display:flex;align-items:center}.xm-upload .xm-upload__button{margin-right:16px}.xm-upload--bottom{align-items:flex-end}.xm-upload .xm-upload__progress{margin-left:5px;position:relative;display:flex;align-items:center}.xm-upload--close{color:#c0c6cc;position:absolute;right:0}
