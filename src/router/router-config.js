@@ -184,6 +184,11 @@ export const routerConfig = {
           'path': '/table'
         },
         {
+          'desc': 'Decorator 装饰器',
+          'name': 'decorator',
+          'path': '/decorator'
+        },
+        {
           'desc': 'Upload 文件上传',
           'name': 'upload',
           'path': '/upload'
@@ -207,6 +212,11 @@ export const routerConfig = {
           'desc': 'Cropper 裁剪',
           'name': ' cropper',
           'path': '/cropper'
+        },
+        {
+          'desc': 'Annotation 注解',
+          'name': 'annotation',
+          'path': '/annotation'
         }
 
       ]

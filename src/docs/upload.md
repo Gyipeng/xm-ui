@@ -2,7 +2,7 @@
 ----
 ### 基础用法
 <div class="demo-block">
-     <xm-upload :onSuccess="onSuccess" accept="image/gif, image/jpeg" :onClose="onClose">
+     <xm-upload :onSuccess="onSuccess" accept="image/*" :onClose="onClose">
           <xm-video v-if="src" :src="src"  v-width="224" v-height="144">
          </xm-video>
     </xm-upload>

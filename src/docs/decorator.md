@@ -1,7 +1,38 @@
-# Table 表格
+# Decorator 装饰器
 ----
-### 基本用法
+### Decorator
 
+- @before: 触发前
+
+- @after : 触发后
+
+- @around : 触发前后环绕
+
+- @validate :方法校验
+
+- @checkLengthg : 校验长度
+
+- @checkParamt : 校验参数
+
+- @checkPhone  : 校验手机
+
+- @validate :方法校验
+
+- @maapLoading : 加载前后
+
+- @Time : 延迟执行
+
+- @debounce  : 防抖
+
+- @throttle  : 节流
+
+- @Disabled  : 禁用
+
+- @Required  : 必填
+
+
+
+### 装饰器的作用
 <div class="demo-block">
  <el-button
     type="primary"
@@ -57,8 +88,13 @@
       };
     },
     methods:{
-     loadingTable(){
+    async loadingTable(){
       this.loading=!this.loading
+     setTimeout(()=>{
+          this.loading=!this.loading
+
+     },1000)
+
      }
     }
   };
@@ -74,7 +110,6 @@
       触发方法
     </el-button>
     <el-table
-       v-loading="loading"
        :data="tableData"
        style="width: 100%">
        <el-table-column
@@ -101,6 +136,7 @@
   </style>
 
   <script>
+  import { maapLoading } from '@/utils/decorator.js';
     export default {
       data() {
         return {
@@ -117,12 +153,14 @@
             name: '王小虎',
             address: '上海市普陀区金沙江路 1518 弄'
           }],
-          loading: false
         };
       },
       methods:{
-       loadingTable(){
-        this.loading=!this.loading
+        @maapLoading('.demo-block')
+        async loadingTable(){
+         await setTimeout(()=>{
+                     console.log(1);
+         },1000)
        }
       }
     };

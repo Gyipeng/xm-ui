@@ -8,7 +8,7 @@
       <slot>
       </slot>
     </div>
-    <input type="file" v-bind="$attrs" name="file" class="xm-upload__input" v-show="false" ref="upload"
+    <input type="file" v-bind="$attrs" name="file" class="xm-upload__input" v-show="false" ref="upload" :accept="accept"
            @change="uploadFiles">
     <el-link v-if="!firstUpload" size="small" type="primary" @click="checkedFile">重新上传</el-link>
     <div class="xm-upload__progress" v-if="loading">
