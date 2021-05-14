@@ -164,6 +164,11 @@ export const routerConfig = {
           'path': '/mediaBox'
         },
         {
+          'desc': 'MediaPhone 多媒体模版',
+          'name': 'media-phone',
+          'path': '/mediaPhone'
+        },
+        {
           'desc': 'Media 媒体',
           'name': 'media',
           'path': '/media'

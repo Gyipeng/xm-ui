@@ -163,6 +163,7 @@ export default {
   methods: {
     focus () {
       this.range = window.getSelection().rangeCount && window.getSelection().getRangeAt(0)
+      console.log(this.range);
     },
     mouseup () {
       this.range = window.getSelection().getRangeAt(0)
