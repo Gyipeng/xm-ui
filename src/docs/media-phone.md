@@ -4,9 +4,30 @@
 ### 基础用法
 <div class="demo-block">
   <div >
-    <xm-phone>测试电话 </xm-phone>
+    <xm-media-phone  @click="handleClick">测试电话 </xm-media-phone>
   </div>
 </div>
+
+<script>
+export default {
+  data() {
+    return {
+
+
+     }
+  },
+  methods: {
+      handleClick(item){
+          console.log(item)
+      }
+
+  },
+}
+
+</script>
+
+
+
 
 ::: demo
 ```html

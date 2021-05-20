@@ -1,4 +1,3 @@
-
 import Button from './button/index.js'
 import Tag from './tag/index.js'
 import Card from './card/index.js'
@@ -26,9 +25,11 @@ import Action from './action/index.js'
 import Editor from './editor/index.js'
 import Upload from './upload/index.js'
 import State from './state/index.js'
+import MediaPhone from './media-phone/index.js'
 
 import style from '../utils/style'
 import filters from '../utils/filter'
+
 const components = [
   Button,
   Tag,
@@ -56,7 +57,8 @@ const components = [
   Action,
   Editor,
   Upload,
-  State
+  State,
+  MediaPhone
 ]
 
 const directives = {
@@ -115,6 +117,7 @@ export default {
   Action,
   Editor,
   Upload,
-  State
+  State,
+  MediaPhone
 
 }

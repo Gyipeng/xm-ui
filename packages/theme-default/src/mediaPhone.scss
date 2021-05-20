@@ -1,0 +1,11 @@
+@import "./mixins/mixins.scss";
+@include b(media-phone){
+
+  @include e(content){
+    margin-bottom: 16px;
+    //height: 167px;
+  }
+
+
+
+}

@@ -26,17 +26,7 @@ export default {
   props: {
     data: {
       type: Array,
-      default: () => [{
-        name: '标签一',
-        color: 'primary'
-      }, {
-        name: '标sdsdsddgsgs签四',
-        color: 'success'
-      }, {
-        name: '标sdsdsddgsgs签四',
-        color: 'info'
-      }
-      ]
+      default: () => []
     },
     type: String
 

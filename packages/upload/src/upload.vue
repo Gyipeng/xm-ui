@@ -47,7 +47,11 @@
       },
       showPreview(file) {
         let that = this
-        this.onStart && this.onStart(file)
+
+        if (this.onStart) {
+          let before = this.onStart(file)
+          if (!before) return
+        }
         if (window.FileReader) {
           let fr = new FileReader()
           that.fr = fr
