@@ -2,7 +2,7 @@
 ----
 ### 基础用法
 <div class="demo-block">
-     <xm-upload :onSuccess="onSuccess" accept="video/*" :onClose="onClose" :onStart="onStart">
+     <xm-upload :onSuccess="onSuccess" accept="video/*" :onClose="onClose" :onStart="onStart" :firstUpload="!src">
           <xm-video v-if="src" :src="src"  v-width="224" v-height="144">
          </xm-video>
     </xm-upload>
@@ -38,7 +38,7 @@ export default {
 ```html
 
 <div class="demo-block">
-     <xm-upload :onSuccess="onSuccess" accept="video/*" :onClose="onClose" :onStart="onStart">
+     <xm-upload :onSuccess="onSuccess" accept="video/*" :onClose="onClose" :onStart="onStart" :firstUpload="!src">
           <xm-video v-if="src" :src="src"  v-width="224" v-height="144">
          </xm-video>
     </xm-upload>

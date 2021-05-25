@@ -32,11 +32,12 @@
     data() {
       return {
         loading: 0,
-        firstUpload: true,
+        // firstUpload: true,
         fr: ''
       }
     },
     mounted() {
+      console.log(this.firstUpload);
     },
     methods: {
       uploadFiles(ev) {
@@ -57,7 +58,7 @@
           that.fr = fr
           fr.onloadend = function (e) {
             that.onSuccess && that.onSuccess(e.target.result, file)
-            that.firstUpload = false
+            // that.firstUpload = false
             that.loading = 0
             that.$refs.upload.value = null
           }
@@ -76,7 +77,7 @@
       },
       handleClose() {
         this.fr.abort()
-        this.firstUpload = true
+        // this.firstUpload = true
         this.$emit('close')
       }
     },
@@ -86,7 +87,8 @@
       limit: Number,
       onStart: Function,
       onSuccess: Function,
-      onError: Function
+      onError: Function,
+      firstUpload: Boolean
     },
     computed: {
       cls() {
