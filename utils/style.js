@@ -1,7 +1,7 @@
 export default {
   height: {
     inserted(el, binding) {
-      console.log(el, binding);
+      // console.log(el, binding);
       if (binding.value) {
         el.style.height = binding.value + (String(binding.value).endsWith('%') ? '' : 'px')
       }

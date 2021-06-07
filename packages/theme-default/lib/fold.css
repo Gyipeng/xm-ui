@@ -1,1 +1,1 @@
-@charset "UTF-8";.xm-fold{display:flex;align-items:center}.xm-fold .xm-fold__shadow{width:12px;border-radius:0 6px 6px 0;background:#f7f9fa;border:1px solid #d4d7d9;border-left-width:0}
+@charset "UTF-8";.xm-fold--default{display:flex;align-items:center}.xm-fold .xm-fold__shadow{width:12px;border-radius:0 6px 6px 0;background:#f7f9fa;border:1px solid #d4d7d9;border-left-width:0}.xm-fold--primary{position:relative;display:flex}

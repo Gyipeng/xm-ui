@@ -163,7 +163,7 @@ export default {
   methods: {
     focus () {
       this.range = window.getSelection().rangeCount && window.getSelection().getRangeAt(0)
-      console.log(this.range);
+      // console.log(this.range);
     },
     mouseup () {
       this.range = window.getSelection().getRangeAt(0)
@@ -183,7 +183,7 @@ export default {
       // console.log(node, 123)
     },
     del (e) {
-      console.log(e)
+      // console.log(e)
       let node = this.range.commonAncestorContainer
       console.log(node,this.range)
       if (!node.data.includes(';')) {

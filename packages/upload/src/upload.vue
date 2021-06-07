@@ -37,7 +37,7 @@
       }
     },
     mounted() {
-      console.log(this.firstUpload);
+      // console.log(this.firstUpload);
     },
     methods: {
       uploadFiles(ev) {
