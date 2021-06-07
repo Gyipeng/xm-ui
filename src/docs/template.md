@@ -66,6 +66,7 @@ export default {
     :id="123"
     :label="123"
      name="测试"
+     more="覆盖更多终端"
     >
          <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
           <div slot="footer" class="xm-template__footer">
@@ -86,6 +87,7 @@ export default {
     :id="123"
     :label="123"
      name="测试"
+     more="覆盖更多终端"
     >
          <xm-audio v-width="224" v-height="144" src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3"></xm-audio>
           <div slot="footer" >

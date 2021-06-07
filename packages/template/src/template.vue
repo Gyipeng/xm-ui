@@ -1,5 +1,6 @@
 <template>
   <div :class="cls">
+    <div class="xm-template__more"   v-if="!isEdit&&more"><div class="xm-template__moreText" >{{more}}</div><img src="../../../assets/img/more.png" alt=""></div>
     <div v-if="isEdit&&(disabled || isChecked)" :class="getModelType"></div>
     <div class="xm-template__header">
       <div class="xm-template__name">
@@ -93,6 +94,9 @@ export default {
       default: false
     },
     bodyStyle: {
+      type: Boolean
+    },
+    more:{
       type: Boolean
     }
   },
