@@ -5,7 +5,7 @@
   </div>
   <div class="xm-fold xm-fold--primary" ref="fold" v-else>
     <div class="xm-fold__item" v-for="(data, index) in dataList" :key="index"
-         :style="{position:'absolute',left:`${width*index}px`}">
+         :style="{position:'absolute',left:`${width*(dataList.length>1?index:1)}px`,zIndex:dataList.length-index}">
       <slot name="fold" :data="data"></slot>
     </div>
   </div>
@@ -50,7 +50,8 @@
         this.$nextTick(() => {
           let {offsetWidth} = document.querySelector(".xm-fold--primary")
           let item = document.querySelector(".xm-fold__item")
-          let length = this.dataList.length-1
+          let length = this.dataList.length - 1
+          length = length ? length : 2
           this.width = ((offsetWidth - item.offsetWidth) / length)
           return this.width
         })
