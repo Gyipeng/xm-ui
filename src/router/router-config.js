@@ -67,16 +67,16 @@ export const routerConfig = {
           'name': 'checked-card',
           'path': '/checkedCard'
         },
-        // {
-        //   'desc': 'RadioCard 多选卡片',
-        //   'name': 'radio-card',
-        //   'path': '/radioCard'
-        // },
         {
-          'desc': 'Template 多选模版',
-          'name': 'template',
-          'path': '/template'
+          'desc': 'RadioCard 多选卡片',
+          'name': 'radio-card',
+          'path': '/radioCard'
         },
+        // {
+        //   'desc': 'Template 多选模版',
+        //   'name': 'template',
+        //   'path': '/template'
+        // },
         {
           'desc': 'Tabs 标签页',
           'name': 'tabs',
@@ -222,6 +222,16 @@ export const routerConfig = {
           'desc': 'Annotation 注解',
           'name': 'annotation',
           'path': '/annotation'
+        },
+        {
+          'desc': 'cron 定时任务',
+          'name': 'cron',
+          'path': '/cron'
+        },
+        {
+          'desc': 'indicatorTemplate 指示器模版',
+          'name': 'indicatorTemplate',
+          'path': '/indicatorTemplate'
         }
 
       ]

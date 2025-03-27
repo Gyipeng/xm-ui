@@ -1,0 +1,7 @@
+@import "./mixins/mixins.scss";
+
+@include b(cron){
+    background-color: aliceblue;
+    color: #000;
+    
+}

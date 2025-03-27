@@ -15,6 +15,6 @@
   },
   "dependencies": {
     "gulp-csso": "^4.0.1",
-    "gulp-sass": "^4.1.0"
+    "gulp-dart-sass": "^1.1.0"
   }
 }

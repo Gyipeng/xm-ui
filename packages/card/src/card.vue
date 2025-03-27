@@ -31,7 +31,7 @@
           {{ desc }}
         </div>
         <div class="xm-card__footer">
-           <xm-tag class="xm-card__action" round  type="plain" v-for="action in actions" >
+           <xm-tag class="xm-card__action" round  type="plain" v-for="action in actions" :key="action" >
              {{action}}
            </xm-tag>
         </div>

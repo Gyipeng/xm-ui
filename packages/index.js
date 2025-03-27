@@ -26,6 +26,8 @@ import Editor from './editor/index.js'
 import Upload from './upload/index.js'
 import State from './state/index.js'
 import MediaPhone from './media-phone/index.js'
+import Cron from './cron/index.js'
+import IndicatorTemplate from './indicatorTemplate/index.js'
 
 import style from '../utils/style'
 import filters from '../utils/filter'
@@ -58,7 +60,9 @@ const components = [
   Editor,
   Upload,
   State,
-  MediaPhone
+  MediaPhone,
+  Cron,
+  IndicatorTemplate
 ]
 
 const directives = {
@@ -118,6 +122,7 @@ export default {
   Editor,
   Upload,
   State,
-  MediaPhone
-
+  MediaPhone,
+  Cron,
+  IndicatorTemplate
 }

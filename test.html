@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class a {
+    constructor() {
+      this.b = 123
+    }
+    d () {
+
+    }
+  }
+  class b extends a {}
+  let c = new b()
+  var k=[]
+  // var o = Object.getOwnPropertyNames(c);
+
+  function getProto (c) {
+    let proto = c.__proto__
+    while (proto) {
+      var o = Object.getOwnPropertyNames(proto);
+      if (proto.Prototype) {
+        debugger
+        proto = proto.Prototype
+      } else  {
+        break
+      }
+      console.log(o);
+      k.push(o)
+    }
+  }
+  getProto(c)
+  //   class a {
+  //     test () {
+  //
+  //     }
+  //   }
+  //   class b extends  a {
+  //     constructor () {
+  //       super()
+  //       this.d = {}
+  //     }
+  //   }
+  //
+  //
+  // var target = new b();
+  // var enum_and_nonenum = Object.getOwnPropertyNames(target);
+  // var enum_only = Object.keys(target);
+  // var nonenum_only = enum_and_nonenum.filter(function(key) {
+  //   var indexInEnum = enum_only.indexOf(key);
+  //   if (indexInEnum == -1) {
+  //     // 没有发现在enum_only健集中意味着这个健是不可枚举的,
+  //     // 因此返回true 以便让它保持在过滤结果中
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // });
+  //
+  // console.log(nonenum_only);
+
+</script>
+</body>
+
+</html>

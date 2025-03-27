@@ -112,6 +112,7 @@ export default {
 
  <el-checkbox-group v-model="checkedCities" v-font="14" @change="handleCheckedCitiesChange">
     <xm-template v-width="322"  v-for=" item in templates" class="mr10"
+    :key="item.id"
     :menus="item.menus"
     :buttons="data"
     :id="item.id"
@@ -230,6 +231,7 @@ export default {
 
  <el-checkbox-group v-model="checkedCities" v-font="14" @change="handleCheckedCitiesChange">
     <xm-template v-width="322"  v-for=" item in templates" class="mr10"
+    :key="item.id"
     :menus="item.menus"
     :buttons="data"
     :id="item.id"

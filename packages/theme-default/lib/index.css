@@ -27,6 +27,7 @@
 @import "upload.css";
 @import "state.css";
 @import "mediaPhone.css";
+@import "cron.css";
 *,:after,:before{
   box-sizing: border-box;
   margin: 0;
